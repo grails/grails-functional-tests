@@ -18,11 +18,11 @@ class BookFunctionalSpec extends GebSpec {
     def cleanup() {
     }
 
-    void "test something"() {
-        when:"The home page is visited"
-            go '/'
+    void "Test that a book was created in the Bootstrap class"() {
+        when:"We go to the book URI"
+            go '/book/show/1'
 
-        then:"The title is correct"
-        	$('title').text() == "Welcome to Grails"
+        then:"Then thew show book view is rendered"
+        	$('title').text() == "Show Book"
     }
 }
