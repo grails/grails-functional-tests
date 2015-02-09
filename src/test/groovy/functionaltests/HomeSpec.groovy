@@ -21,7 +21,9 @@ class HomeSpec extends GebSpec {
     void "Test the home page renders correctly"() {
         when:"The home page is visited"
             go '/'
-
+            if($('title').text() != "Welcome to Grails") {
+              println driver.pageSource
+            }
         then:"The title is correct"
         	$('title').text() == "Welcome to Grails"
           $('li.controller',0).text() == 'functionaltests.BookController'
