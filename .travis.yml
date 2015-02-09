@@ -4,3 +4,4 @@ jdk:
   - oraclejdk7
   - openjdk7
 script: ./gradlew check --info
+after_failure: ./travis/junit-errors-to-stdout.sh
