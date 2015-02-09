@@ -14,6 +14,13 @@ spring:
       check-template-location: false
 
 ---
+reactor:
+  dispatchers:
+    default: threadPool
+    threadPool:
+      type: threadPoolExecutor
+      size: 5
+      backlog: 1024
 grails:
     mime:
         disable:
@@ -30,7 +37,7 @@ grails:
             css: text/css
             csv: text/csv
             form: application/x-www-form-urlencoded
-            html: 
+            html:
               - text/html
               - application/xhtml+xml
             js: text/javascript
@@ -40,7 +47,7 @@ grails:
             multipartForm: multipart/form-data
             rss: application/rss+xml
             text: text/plain
-            hal: 
+            hal:
               - application/hal+json
               - application/hal+xml
             xml:
@@ -106,6 +113,4 @@ environments:
                testWhileIdle: true
                testOnReturn: false
                jdbcInterceptors: ConnectionState
-               defaultTransactionIsolation: TRANSACTION_READ_COMMITTED            
-
-
+               defaultTransactionIsolation: TRANSACTION_READ_COMMITTED
