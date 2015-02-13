@@ -1,8 +1,8 @@
 ---
 grails:
-  profile: web
+  profile: web-plugin
   codegen:
-    defaultPackage: functionaltests
+    defaultPackage: loadfirst
 info:
     app:
         name: '@info.app.name@'
@@ -15,16 +15,11 @@ spring:
 
 ---
 grails11951:
-    prop3: Prop Three Defined By app1 Application
+    prop1: Prop One Defined By LoadFirst Plugin
+    prop2: Prop Two Defined By LoadFirst Plugin
+    prop3: Prop Three Defined By LoadFirst Plugin
 
 ---
-reactor:
-  dispatchers:
-    default: threadPool
-    threadPool:
-      type: threadPoolExecutor
-      size: 5
-      backlog: 1024
 grails:
     mime:
         disable:
@@ -118,3 +113,5 @@ environments:
                testOnReturn: false
                jdbcInterceptors: ConnectionState
                defaultTransactionIsolation: TRANSACTION_READ_COMMITTED
+
+

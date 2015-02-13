@@ -1,1 +1,4 @@
-include 'app1'
+include 'app1', 'loadfirst', 'loadsecond'
+
+project(':loadfirst').projectDir = new File('plugins/loadfirst')
+project(':loadsecond').projectDir = new File('plugins/loadsecond')
