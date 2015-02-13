@@ -17,5 +17,11 @@ class InspectConfigControllerSpec extends GebSpec {
         $('div', 0).text() == 'Prop One Defined By LoadFirst Plugin'
         $('div', 1).text() == 'Prop Two Defined By LoadSecond Plugin'
         $('div', 2).text() == 'Prop Three Defined By app1 Application'
+        $('div', 3).text() == 'Prop One Defined By LoadFirst Plugin'
+        $('div', 4).text() == 'Prop Two Defined By LoadSecond Plugin'
+        $('div', 5).text() == 'Prop Three Defined By app1 Application'
+        $('div', 6).text() == 'Prop One Defined By LoadFirst Plugin'
+        $('div', 7).text() == 'Prop Two Defined By LoadSecond Plugin'
+        $('div', 8).text() == 'Prop Three Defined By app1 Application'
     }
 }
