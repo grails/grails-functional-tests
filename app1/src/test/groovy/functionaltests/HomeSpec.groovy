@@ -9,7 +9,7 @@ import geb.spock.*
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
-@Integration
+@Integration(applicationClass=functionaltests.Application)
 class HomeSpec extends GebSpec {
 
     def setup() {

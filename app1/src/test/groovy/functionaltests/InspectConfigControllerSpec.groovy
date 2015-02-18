@@ -5,7 +5,7 @@ import grails.test.mixin.integration.Integration
 import spock.lang.Issue
 import geb.spock.GebSpec
 
-@Integration
+@Integration(applicationClass=functionaltests.Application)
 class InspectConfigControllerSpec extends GebSpec {
 
     @Issue('GRAILS-11951')
