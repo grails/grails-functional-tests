@@ -78,7 +78,3 @@ idea {
         scopes.PROVIDED.plus += [configurations.provided]
     }
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = gradleWrapperVersion
-}

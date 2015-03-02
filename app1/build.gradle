@@ -74,7 +74,3 @@ dependencies {
 
   runtime project(':loadfirst'), project(':loadsecond')
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = gradleWrapperVersion
-}
