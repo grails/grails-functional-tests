@@ -28,8 +28,10 @@ class HomeSpec extends GebSpec {
         	$('title').text() == "Welcome to Grails"
           $('li.controller',0).text() == 'functionaltests.BookController'
           $('li.controller',1).text() == 'functionaltests.InspectConfigController'
+          $('li.controller',2).text() == 'functionaltests.MiscController'
+          $('li.controller',3).text() == 'functionaltests.UploadController'
           // SimpleController should not become a controller as it is not in a grails-app/controllers dir
-          !$('li.controller',2).text()
+          !$('li.controller',4).text()
 
     }
 }
