@@ -9,7 +9,7 @@ import geb.spock.*
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@Integration
+@Integration(applicationClass=functionaltests.Application)
 class UploadControllerSpec extends GebSpec {
 
 
