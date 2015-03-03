@@ -2,7 +2,6 @@ sudo: false
 cache:
   directories:
   - $HOME/.gradle/wrapper
-  - $HOME/.gradle/caches
 language: groovy
 env:
   global:
