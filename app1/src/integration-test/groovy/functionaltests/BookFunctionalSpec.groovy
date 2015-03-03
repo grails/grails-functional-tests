@@ -25,4 +25,18 @@ class BookFunctionalSpec extends GebSpec {
         then:"Then thew show book view is rendered"
         	$('title').text() == "Show Book"
     }
+
+    void "Test that switching language results in correct encodings"() {
+        when:"the show page is rendered in german"
+            go "/book/show/1?lang=de"
+            println driver.pageSource
+        then:"The language is correct"
+            $('a', class:'create').text() == 'Book anlegen'
+
+        when:"The a book is deleted"
+            $('input', class:'delete').click()
+
+        then:"The delete message is shown with umlats"
+            $('div', class:'message').text().contains('wurde gelöscht')
+    }
 }
