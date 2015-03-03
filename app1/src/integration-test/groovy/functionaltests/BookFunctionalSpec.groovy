@@ -32,6 +32,6 @@ class BookFunctionalSpec extends GebSpec {
             println driver.pageSource
         then:"The language is correct"
             $('a', class:'create').text() == 'Book anlegen'
-            $('input', class:'delete').value == 'Löschen'
+            $('input', class:'delete').@value == 'Löschen'
     }
 }

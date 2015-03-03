@@ -26,11 +26,11 @@ class BookIntegrationSpec extends Specification {
         book.save(flush: true)
 
         then:
-        Book.list()?.size() == 1
+        Book.list()?.size() == 2
     }
 
     void "test transaction rolled back from previous test"() {
         expect:
-            Book.count() == 0
+            Book.count() == 1
     }
 }
