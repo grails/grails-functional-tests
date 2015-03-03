@@ -11,5 +11,5 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
-script: ./gradlew clean check --info --refresh-dependencies
+script: ./gradlew check --info --refresh-dependencies
 after_failure: ./travis/junit-errors-to-stdout.sh
