@@ -32,11 +32,6 @@ class BookFunctionalSpec extends GebSpec {
             println driver.pageSource
         then:"The language is correct"
             $('a', class:'create').text() == 'Book anlegen'
-
-        when:"The a book is deleted"
-            $('input', class:'delete').click()
-
-        then:"The delete message is shown with umlats"
-            $('div', class:'message').text().contains('wurde gelöscht')
+            $('input', class:'delete').value == 'Löschen'
     }
 }
