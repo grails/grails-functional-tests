@@ -1,4 +1,4 @@
-include 'app1','app2','loadfirst', 'loadsecond'
+include 'app1','app2','datasources','loadfirst', 'loadsecond'
 
 project(':loadfirst').projectDir = new File('plugins/loadfirst')
 project(':loadsecond').projectDir = new File('plugins/loadsecond')
