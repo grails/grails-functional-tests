@@ -25,15 +25,17 @@ class HomeSpec extends GebSpec {
               println driver.pageSource
             }
         then:"The title is correct"
-        	$('title').text() == "Welcome to Grails"
-          $('li.controller',0).text() == 'functionaltests.BookController'
-          $('li.controller',1).text() == 'functionaltests.ErrorsController'
-          $('li.controller',2).text() == 'functionaltests.ForwardingController'
-          $('li.controller',3).text() == 'functionaltests.InspectConfigController'
-          $('li.controller',4).text() == 'functionaltests.MiscController'
-          $('li.controller',5).text() == 'functionaltests.UploadController'
-          // SimpleController should not become a controller as it is not in a grails-app/controllers dir
-          !$('li.controller',6).text()
+            $('title').text() == "Welcome to Grails"
+            $('li.controller',0).text() == 'demo.AlphaController'
+            $('li.controller',1).text() == 'functionaltests.BookController'
+            $('li.controller',2).text() == 'functionaltests.ErrorsController'
+            $('li.controller',3).text() == 'functionaltests.ForwardingController'
+            $('li.controller',4).text() == 'functionaltests.InspectConfigController'
+            $('li.controller',5).text() == 'functionaltests.MiscController'
+            $('li.controller',6).text() == 'functionaltests.UploadController'
+            $('li.controller',7).text() == 'grails.functionaltests.InGrailsPackageController'
+            // SimpleController should not become a controller as it is not in a grails-app/controllers dir
+            !$('li.controller',8).text()
 
     }
 }
