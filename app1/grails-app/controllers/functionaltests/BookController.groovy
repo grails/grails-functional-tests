@@ -97,6 +97,11 @@ class BookController {
         }
     }
 
+    def validateBook() {
+        def b = new Book(params)
+        render "The validate method returned ${b.validate()}"
+    }
+
     protected void notFound() {
         request.withFormat {
             form multipartForm {
