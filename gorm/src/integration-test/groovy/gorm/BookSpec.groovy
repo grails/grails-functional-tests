@@ -25,7 +25,13 @@ class BookSpec extends Specification {
                 title == "The Stand"
             }.count() == 1
             Book.findByTitle("The Stand")
-            Book.countByTitle("The Stand") == 1    
+            Book.countByTitle("The Stand") == 1
             Book.findAllByTitle("The Stand").size() == 1
+    }
+
+    void "Test that services are autowired on construction and retrieval"() {
+        expect:
+            new Book().testService
+            Book.first().testService
     }
 }
