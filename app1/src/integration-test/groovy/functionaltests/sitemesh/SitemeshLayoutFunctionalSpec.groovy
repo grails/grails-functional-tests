@@ -26,4 +26,14 @@ class SitemeshLayoutFunctionalSpec extends GebSpec {
         $('title').text() == 'Foo Layout'
 
     }
+
+    @Issue('GRAILS-12045')
+    void 'test layout specified in controller property applied to a GSP that does not contain a root html tag'() {
+        when:
+        go '/layoutSpecifiedByProperty/snippetView'
+
+        then:
+        $('title').text() == 'Foo Layout'
+        $().text().contains 'this is some content'
+    }
 }
