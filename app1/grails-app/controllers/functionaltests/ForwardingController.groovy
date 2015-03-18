@@ -17,4 +17,12 @@ class ForwardingController {
     def next() {
         render "Forward Destination. Params: ${params.param1 ?: ''}"
     }
+
+    def forwardToList() {
+        forward action: 'list'
+    }
+
+    def list() {
+        [people: ['Jeff', 'Jake', 'Zack', 'Betsy']]
+    }
 }

@@ -42,4 +42,15 @@ class ForwardingSpec extends GebSpec {
         then:"The forward works correctly"
             $('body').text() == 'Forward Destination. Params: test'
     }
+
+    void 'Test forwarding to an action which returns a Map'() {
+        when:
+            go '/forwarding/forwardToList'
+
+        then:
+            $('li', text: 'Jeff')
+            $('li', text: 'Zack')
+            $('li', text: 'Jake')
+            $('li', text: 'Betsy')
+    }
 }
