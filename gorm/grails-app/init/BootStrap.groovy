@@ -3,7 +3,12 @@ import gorm.*
 class BootStrap {
 
     def init = { servletContext ->
-        new Book(title:"The Stand").save(flush:true)
+        def b = new Book(title:"The Stand")
+
+        // GRAILS-12080
+        assert b?.testService
+
+        b.save(flush:true)
     }
     def destroy = {
     }
