@@ -22,12 +22,6 @@ class BookSpec extends Specification {
         expect:"Dynamic finders to work"
             testService.testDynamicFinders() // test when called from service
             Book.count() == 1
-            Book.where {
-                title == "The Stand"
-            }.count() == 1
-            Book.where {
-                title == 'Something Else'
-            }.count() == 0
             Book.findByTitle("The Stand")
             Book.countByTitle("The Stand") == 1
             Book.countByTitle("Something Else") == 0

@@ -20,7 +20,6 @@ class UserSpec extends Specification {
 
 
         then:"THe results are correct"
-            User.where { city.id == c.id}.list().size() == 2
             User.count() == 3
             results.size() == 2
     }
