@@ -25,6 +25,10 @@ reactor:
       type: threadPoolExecutor
       size: 5
       backlog: 1024
+    dispatcherGroup:
+      type: dispatcherGroup
+      size: 0
+      backlog: 1024
 grails:
     mime:
         disable:
