@@ -5,4 +5,8 @@ class MiscController {
     def actionWhichReturnsNull() {
         null
     }
+
+    def actionWhichReturnsMap() {
+        [:]
+    }
 }
