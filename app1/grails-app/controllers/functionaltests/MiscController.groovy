@@ -9,4 +9,8 @@ class MiscController {
     def actionWhichReturnsMap() {
         [:]
     }
+
+    def interceptedByInterceptor() {
+    	// no op
+    }
 }
