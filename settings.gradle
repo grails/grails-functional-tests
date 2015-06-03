@@ -1,4 +1,4 @@
-include 'app1','app2','datasources','namespaces', 'gorm','loadfirst', 'loadsecond'
+include 'app1','app2','datasources','namespaces', 'gorm','loadfirst', 'loadsecond','issue-698-domain-save-npe'
 
 project(':loadfirst').projectDir = new File('plugins/loadfirst')
 project(':loadsecond').projectDir = new File('plugins/loadsecond')
