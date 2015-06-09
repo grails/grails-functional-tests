@@ -13,4 +13,12 @@ class ErrorsController {
     def customError(CustomException exception) {
         render "Message = $exception.message"
     }
+
+    def notFound() {
+    	render "Page Not Found"
+    }
+
+    def notFoundTest() {
+    	render status:404
+    }
 }

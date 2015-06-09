@@ -36,4 +36,11 @@ class ErrorsFunctionalSpec extends GebSpec {
         then:"The title is correct"
             $('ul', class:'errors').text() == 'An error has occurred'
     }
+
+    void "Test 404 mapping to controller"() {
+        when:"When an action returns a 404"
+            go '/errors/notFoundTest'
+        then:"Make sure the global 404 handler is triggered"
+            driver.pageSource.contains 'Page Not Found'
+    }    
 }
