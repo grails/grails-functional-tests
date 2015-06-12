@@ -6,6 +6,7 @@ language: groovy
 env:
   global:
   - TERM=dumb
+  - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=372m -XX:+CMSClassUnloadingEnabled"
 jdk:
   - oraclejdk8
   - oraclejdk7
