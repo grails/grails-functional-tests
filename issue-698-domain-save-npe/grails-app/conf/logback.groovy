@@ -27,4 +27,4 @@ if(Environment.current == Environment.DEVELOPMENT) {
     }
 }
 
-logger "org.grails.spring.beans.factory.OptimizedAutowireCapableBeanFactory", DEBUG, ['STDOUT']
+// logger "org.grails.spring.beans.factory.OptimizedAutowireCapableBeanFactory", DEBUG, ['STDOUT']
