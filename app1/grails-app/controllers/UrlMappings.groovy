@@ -9,7 +9,7 @@ class UrlMappings {
             }
         }
 
-		"/alphaDemo"(controller: 'demo', action: 'doit', namespace: 'alpha')
+        "/alphaDemo"(controller: 'demo', action: 'doit', namespace: 'alpha')
         "/betaDemo"(controller: 'demo', action: 'doit', namespace: 'beta')
 
         "/"(view:"/index")
