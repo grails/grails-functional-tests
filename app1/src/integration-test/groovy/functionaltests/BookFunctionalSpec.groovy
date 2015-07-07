@@ -18,6 +18,14 @@ class BookFunctionalSpec extends GebSpec {
     def cleanup() {
     }
 
+    void "Test that when the /viewBooks URL is hit it redirects to the book list"() {
+        when:"We go to the book URI"
+            go '/viewBooks'
+
+        then:"Then thew show book view is rendered"
+            $('title').text() == "Book List"
+    }    
+
     void "Test that a book was created in the Bootstrap class"() {
         when:"We go to the book URI"
             go '/book/show/1'

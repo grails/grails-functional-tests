@@ -3,6 +3,7 @@ import functionaltests.*
 class UrlMappings {
 
 	static mappings = {
+        "/viewBooks"(redirect: '/book/index')
         "/$controller/$action?/$id?(.$format)?"{
             constraints {
                 // apply constraints here
