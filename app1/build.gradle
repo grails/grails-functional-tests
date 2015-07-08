@@ -74,3 +74,10 @@ dependencies {
 
   runtime project(':loadfirst'), project(':loadsecond')
 }
+
+tasks.withType(org.gradle.api.tasks.JavaExec) {
+    systemProperty('REPLACE_ME', 'test')
+}
+test {
+    systemProperty('REPLACE_ME', 'test') 
+}

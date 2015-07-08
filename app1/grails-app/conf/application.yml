@@ -16,7 +16,8 @@ spring:
 ---
 grails11951:
     prop3: Prop Three Defined By app1 Application
-
+foo:
+    bar: '${REPLACE_ME}'    
 ---
 reactor:
   dispatchers:
