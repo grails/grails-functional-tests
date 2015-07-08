@@ -11,9 +11,6 @@ import geb.spock.*
 @Integration(applicationClass=functionaltests.Application)
 class MiscFunctionalSpec extends GebSpec {
 
-	static {
-		System.setProperty('foo.bar', 'test')
-	}
 
     @Issue('GRAILS-12028')
     void "Test that when an action returns null the view is rendered by convention"() {
