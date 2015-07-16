@@ -1,7 +1,4 @@
 buildscript {
-    ext {
-      grailsVersion = project.grailsVersion
-    }
     repositories {
         mavenLocal()
         maven { url "http://repo.grails.org/grails/core" }
@@ -29,7 +26,6 @@ apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/m
 apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
 
 ext {
-  grailsVersion = project.grailsVersion
   gradleWrapperVersion = project.gradleWrapperVersion
 }
 
