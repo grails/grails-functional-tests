@@ -1,0 +1,18 @@
+ext {
+    def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/master/build.gradle'
+    def coreBuildFileUrl = new URL(coreBuildFilePath)
+    def versionNumberRegex = /^\s*grailsVersion\s*=\s*['|"](.*)['|"]\s*$/
+    def grailsVersionList = []
+    coreBuildFileUrl.eachLine { line ->
+        def matcher = (line =~ versionNumberRegex)
+        if(matcher) {
+            grailsVersionList << matcher[0][1]
+        }
+    }
+    if(!grailsVersionList) {
+        throw new GradleException("Could not find Grails version at $coreBuildFilePath")
+    } else if(grailsVersionList.size() > 1) {
+        throw new GradleException("Multiple Grails versions (${grailsVersionList}) found at $coreBuildFilePath")
+    }
+    grailsVersion = grailsVersionList[0]
+}

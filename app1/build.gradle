@@ -1,7 +1,4 @@
 buildscript {
-    ext {
-      grailsVersion = project.grailsVersion
-    }
     repositories {
         mavenLocal()
         maven { url "http://repo.grails.org/grails/core" }
@@ -28,7 +25,6 @@ apply plugin: "maven"
 apply plugin: "idea"
 
 ext {
-  grailsVersion = project.grailsVersion
   gradleWrapperVersion = project.gradleWrapperVersion
 }
 
