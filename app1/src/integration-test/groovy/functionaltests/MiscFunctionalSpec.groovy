@@ -11,6 +11,15 @@ import geb.spock.*
 @Integration(applicationClass=functionaltests.Application)
 class MiscFunctionalSpec extends GebSpec {
 
+    @Issue('9133')
+    void "Test that bean override configuration works"() {
+        when:
+            go '/misc/beanPropertyOverrideTest'
+
+        then:
+            driver.pageSource.contains 'Brian'
+
+    }
 
     @Issue('GRAILS-12028')
     void "Test that when an action returns null the view is rendered by convention"() {
