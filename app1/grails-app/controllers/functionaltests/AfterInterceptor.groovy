@@ -7,7 +7,13 @@ class AfterInterceptor {
     }
 
     boolean after() {
-        render 'the after interceptor rendered this'
+        if(params.interceptorRendersView) {
+            render view: '/fromFilter', model: [name: 'JSB']
+        } else if(params.interceptorRendersText) {
+            render text: 'text rendered by interceptor'
+        } else {
+            render 'the after interceptor rendered this'
+        }
         false
     }
 }
