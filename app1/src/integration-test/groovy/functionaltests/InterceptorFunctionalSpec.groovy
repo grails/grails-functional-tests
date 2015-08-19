@@ -33,4 +33,14 @@ class InterceptorFunctionalSpec extends GebSpec {
         then:
         $().text() == 'text rendered by interceptor'
     }
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can redirect'() {
+        when:
+        go '/demo/show?interceptorRedirects=true'
+
+        then:
+        $().text() == 'Hi There!'
+    }
+
 }
