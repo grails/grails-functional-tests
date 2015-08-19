@@ -6,7 +6,7 @@ class DemoController {
         [name: 'Jeff']
     }
 
-    def sayHello() {
-        render 'Hi There!'
+    def sayHello(String actionTakenInInterceptor) {
+        render "Hi There! Special Action: $actionTakenInInterceptor"
     }
 }

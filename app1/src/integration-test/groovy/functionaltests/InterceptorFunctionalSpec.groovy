@@ -40,7 +40,25 @@ class InterceptorFunctionalSpec extends GebSpec {
         go '/demo/show?interceptorRedirects=true'
 
         then:
-        $().text() == 'Hi There!'
+        $().text() == 'Hi There! Special Action: redirect'
     }
 
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can forward'() {
+        when:
+        go '/demo/show?interceptorForwards=true'
+
+        then:
+        $().text() == 'Hi There! Special Action: forward'
+    }
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can chain'() {
+        when:
+        go '/demo/show?interceptorChains=true'
+
+        then:
+        $().text() == 'Hi There! Special Action: chain'
+    }
 }
