@@ -11,5 +11,5 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
-script: ./gradlew check --refresh-dependencies -Dgrails.env=test
+script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test
 after_failure: ./travis/junit-errors-to-stdout.sh
