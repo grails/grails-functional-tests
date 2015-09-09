@@ -18,12 +18,12 @@ class BookFunctionalSpec extends GebSpec {
     def cleanup() {
     }
 
-    @Value('${local.server.port}')
-    int serverPort
+//    @Value('${local.server.port}')
+//    int serverPort
 
     void "Test that when the /viewBooks URL is hit it redirects to the book list"() {
         when:"We go to the book URI"
-            go "http://graemes-imac.local:$serverPort/book/index"
+            go "/book/index"
 
         then:"Then thew show book view is rendered"
             title == "Book List"
