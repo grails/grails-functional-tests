@@ -14,7 +14,7 @@ class SitemeshLayoutFunctionalSpec extends GebSpec {
         go '/layoutByConvention'
 
         then:
-        $('title').text() == 'Convention Layout'
+        title == 'Convention Layout'
     }
 
     @Issue('GRAILS-12045')
@@ -23,7 +23,7 @@ class SitemeshLayoutFunctionalSpec extends GebSpec {
         go '/layoutSpecifiedByProperty'
 
         then:
-        $('title').text() == 'Foo Layout'
+        title == 'Foo Layout'
 
     }
 
@@ -33,7 +33,7 @@ class SitemeshLayoutFunctionalSpec extends GebSpec {
         go '/layoutSpecifiedByProperty/snippetView'
 
         then:
-        $('title').text() == 'Foo Layout'
+        title  == 'Foo Layout'
         $().text().contains 'this is some content'
     }
 }

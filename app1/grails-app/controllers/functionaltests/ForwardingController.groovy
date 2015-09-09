@@ -15,7 +15,7 @@ class ForwardingController {
     }
 
     def next() {
-        render "Forward Destination. Params: ${params.param1 ?: ''}"
+        render "<html><body>Forward Destination. Params: ${params.param1 ?: ''}</body></html>"
     }
 
     def forwardToList() {

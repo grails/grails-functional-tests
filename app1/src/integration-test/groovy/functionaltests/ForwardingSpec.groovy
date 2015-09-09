@@ -24,7 +24,7 @@ class ForwardingSpec extends GebSpec {
             go '/forwarding/one'
 
         then:"The forward works correctly"
-        	$('body').text() == 'Forward Destination. Params:'
+        	$().text() == 'Forward Destination. Params:'
     }
 
     void "Test forward to named controller"() {
@@ -32,7 +32,7 @@ class ForwardingSpec extends GebSpec {
             go '/forwarding/two'
 
         then:"The forward works correctly"
-            $('body').text() == 'Forward Destination. Params:'
+            $().text() == 'Forward Destination. Params:'
     }
 
     void "Test forward with parameters"() {
@@ -40,7 +40,7 @@ class ForwardingSpec extends GebSpec {
             go '/forwarding/three'
 
         then:"The forward works correctly"
-            $('body').text() == 'Forward Destination. Params: test'
+            $().text() == 'Forward Destination. Params: test'
     }
 
     void 'Test forwarding to an action which returns a Map'() {

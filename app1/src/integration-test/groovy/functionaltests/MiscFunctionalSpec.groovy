@@ -27,7 +27,7 @@ class MiscFunctionalSpec extends GebSpec {
             go '/misc/actionWhichReturnsNull'
 
         then:
-        	$('title').text() == 'Action Which Returns Null GSP'
+        	title == 'Action Which Returns Null GSP'
     }
 
     void "Test that placeholder configuration works for the config object"() {

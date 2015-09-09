@@ -4,17 +4,17 @@ class InterceptorDemoController {
 
     def one() {
         if(params.didUriMatchingInterceptorMatch) {
-            render 'interceptor did match for the one action'
+            render '<html><body>interceptor did match for the one action</body></html>'
         } else {
-            render 'interceptor did not match for the one action'
+            render '<html><body>interceptor did not match for the one action</body></html>'
         }
     }
 
     def two() {
         if(params.didUriMatchingInterceptorMatch) {
-            render 'interceptor did match for the two action'
+            render '<html><body>interceptor did match for the two action</body></html>'
         } else {
-            render 'interceptor did not match for the two action'
+            render '<html><body>interceptor did not match for the two action</body></html>'
         }
     }
 }

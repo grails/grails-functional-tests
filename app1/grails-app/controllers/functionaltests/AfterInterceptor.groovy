@@ -10,9 +10,9 @@ class AfterInterceptor {
         if(params.interceptorRendersView) {
             render view: '/fromFilter', model: [name: 'JSB']
         } else if(params.interceptorRendersText) {
-            render text: 'text rendered by interceptor'
+            render text: '<html><body>text rendered by interceptor</body></html>'
         } else {
-            render 'the after interceptor rendered this'
+            render '<html><body>the after interceptor rendered this</body></html>'
         }
         false
     }

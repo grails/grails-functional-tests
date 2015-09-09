@@ -99,7 +99,7 @@ class BookController {
 
     def validateBook() {
         def b = new Book(params)
-        render "The validate method returned ${b.validate()}"
+        render "<html><body>The validate method returned ${b.validate()}</body></html>"
     }
 
     protected void notFound() {
