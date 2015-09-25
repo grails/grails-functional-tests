@@ -6,6 +6,10 @@ class DemoController {
         [name: 'Jeff']
     }
 
+    def another() {
+        render view:"show", model:[name: 'Jeff']
+    }
+
     def sayHello(String actionTakenInInterceptor) {
         render "Hi There! Special Action: $actionTakenInInterceptor"
     }

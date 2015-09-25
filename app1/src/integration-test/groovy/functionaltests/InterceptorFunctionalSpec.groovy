@@ -25,6 +25,14 @@ class InterceptorFunctionalSpec extends GebSpec {
         $().text() == 'Name: JSB'
     }
 
+    void 'Test that before interceptor can render a model and view'() {
+        when:
+        go '/demo/another'
+
+        then:
+        $().text() == 'Name: JSB'
+    }    
+
 
     void 'Test that after interceptor can render text'() {
         when:
