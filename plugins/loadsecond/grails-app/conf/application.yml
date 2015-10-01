@@ -14,10 +14,6 @@ spring:
       check-template-location: false
 
 ---
-grails11951:
-    prop2: Prop Two Defined By LoadSecond Plugin
-
----
 grails:
     mime:
         disable:

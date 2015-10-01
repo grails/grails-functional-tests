@@ -25,6 +25,14 @@ class InterceptorFunctionalSpec extends GebSpec {
         $().text() == 'Name: JSB'
     }
 
+    void 'Test that before interceptor can render a model and view'() {
+        when:
+        go '/demo/another'
+
+        then:
+        $().text() == 'Name: JSB'
+    }    
+
 
     void 'Test that after interceptor can render text'() {
         when:
@@ -32,5 +40,33 @@ class InterceptorFunctionalSpec extends GebSpec {
 
         then:
         $().text() == 'text rendered by interceptor'
+    }
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can redirect'() {
+        when:
+        go '/demo/show?interceptorRedirects=true'
+
+        then:
+        $().text() == 'Hi There! Special Action: redirect'
+    }
+
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can forward'() {
+        when:
+        go '/demo/show?interceptorForwards=true'
+
+        then:
+        $().text() == 'Hi There! Special Action: forward'
+    }
+
+    @Issue('grails/grails-core#9194')
+    void 'Test that after interceptor can chain'() {
+        when:
+        go '/demo/show?interceptorChains=true'
+
+        then:
+        $().text() == 'Hi There! Special Action: chain'
     }
 }
