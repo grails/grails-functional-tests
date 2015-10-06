@@ -3,6 +3,6 @@ package hyphenated
 class HyphenateController {
 
     def longName() { 
-    	render "good"
+    	render "<html><body>good</body></html>"
     }
 }
