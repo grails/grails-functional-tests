@@ -11,6 +11,6 @@ class DemoController {
     }
 
     def sayHello(String actionTakenInInterceptor) {
-        render "Hi There! Special Action: $actionTakenInInterceptor"
+        render "<html><body>Hi There! Special Action: $actionTakenInInterceptor</body></html>"
     }
 }
