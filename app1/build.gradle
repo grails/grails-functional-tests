@@ -63,7 +63,7 @@ dependencies {
   testCompile "org.grails:grails-plugin-testing"
   testCompile "org.grails.plugins:geb:1.0.0"
   testCompile 'org.gebish:geb-core:0.12.2'
-  testCompile 'org.grails:grails-datastore-test-support:4.0.5.RELEASE'
+  testCompile 'org.grails:grails-datastore-test-support'
 
   // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
   testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1'

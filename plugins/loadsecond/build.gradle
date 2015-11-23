@@ -10,8 +10,8 @@ buildscript {
 }
 
 plugins {
-    id "io.spring.dependency-management" version "0.3.1.RELEASE"
-    id "com.jfrog.bintray" version "1.1"
+    id "io.spring.dependency-management" version "0.5.2.RELEASE"
+    id "com.jfrog.bintray" version "1.2"
 }
 
 apply plugin: "spring-boot"
@@ -22,8 +22,6 @@ apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 // Used for publishing to central repository, remove if not needed
-apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
-apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
 
 ext {
   gradleWrapperVersion = project.gradleWrapperVersion
