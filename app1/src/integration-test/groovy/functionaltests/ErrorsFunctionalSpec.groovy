@@ -19,9 +19,17 @@ class ErrorsFunctionalSpec extends GebSpec {
     def cleanup() {
     }
 
-    void "Test 500 mappings for custom exceptions"() {
+    void "Test exception handling methods for internal controller exceptions"() {
         when:"An action that throws a custom error that is handled by a 500 mapping in UrlMappings.groovy"
             go '/errors/throwCustomError'
+
+        then:"The correct action is executed"
+            driver.pageSource.contains 'Message = Something bad'
+    }
+
+    void "Test 500 mappings for custom exceptions"() {
+        when:"An action that throws a custom error that is handled by a 500 mapping in UrlMappings.groovy"
+            go '/demo/throwCustomError'
 
         then:"The correct action is executed"
             driver.pageSource.contains 'Message = Something bad'

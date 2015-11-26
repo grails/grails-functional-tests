@@ -13,4 +13,8 @@ class DemoController {
     def sayHello(String actionTakenInInterceptor) {
         render "Hi There! Special Action: $actionTakenInInterceptor"
     }
+
+    def throwCustomError() {
+        throw new CustomException("Something bad")
+    }    
 }

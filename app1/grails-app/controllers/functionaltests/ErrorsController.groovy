@@ -1,5 +1,7 @@
 package functionaltests
 
+import org.grails.exceptions.*
+
 class ErrorsController {
     def throwErrorInInterceptor() {
         // never hit
@@ -15,7 +17,11 @@ class ErrorsController {
 
     def customError(CustomException exception) {
         render "<html><body>Message = $exception.message</body><html>"
-        response.flush()
+    }
+
+    def customErrorHandler() {
+        def cause = ExceptionUtils.getRootCause(request.exception)
+        render "<html><body>Message = $cause.message</body><html>"   
     }
 
     def notFound() {
