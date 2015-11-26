@@ -1,7 +1,10 @@
 package functionaltests
 
 class ErrorsController {
-
+    def throwErrorInInterceptor() {
+        // never hit
+        assert false
+    }
     def throwCustomError() {
         throw new CustomException("Something bad")
     }
@@ -11,7 +14,8 @@ class ErrorsController {
     }
 
     def customError(CustomException exception) {
-        render "Message = $exception.message"
+        render "<html><body>Message = $exception.message</body><html>"
+        response.flush()
     }
 
     def notFound() {
