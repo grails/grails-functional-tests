@@ -33,4 +33,15 @@ class BookIntegrationSpec extends Specification {
         expect:
             Book.count() == 1
     }
+
+    void "create book and save with where"() {
+        given:
+        def book = new Book(title:title).save(flush: true)
+
+        expect:
+        book != null
+        where:
+        title        | count
+        "The Stand"  | 2
+    }
 }
