@@ -11,5 +11,6 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
+before_install: rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*  
 script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test
 after_failure: ./travis/junit-errors-to-stdout.sh
