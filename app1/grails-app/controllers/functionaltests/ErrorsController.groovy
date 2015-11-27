@@ -1,7 +1,12 @@
 package functionaltests
 
-class ErrorsController {
+import org.grails.exceptions.*
 
+class ErrorsController {
+    def throwErrorInInterceptor() {
+        // never hit
+        assert false
+    }
     def throwCustomError() {
         throw new CustomException("Something bad")
     }
@@ -11,7 +16,12 @@ class ErrorsController {
     }
 
     def customError(CustomException exception) {
-        render "Message = $exception.message"
+        render "<html><body>Message = $exception.message</body><html>"
+    }
+
+    def customErrorHandler() {
+        def cause = ExceptionUtils.getRootCause(request.exception)
+        render "<html><body>Message = $cause.message</body><html>"   
     }
 
     def notFound() {

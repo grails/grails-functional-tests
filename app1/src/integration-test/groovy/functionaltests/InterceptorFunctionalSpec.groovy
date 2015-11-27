@@ -8,6 +8,15 @@ import spock.lang.Issue
 @Integration
 class InterceptorFunctionalSpec extends GebSpec {
 
+    @Issue('grails/grails-core#9434')
+    void "Test that an interceptor exception is handled correctly"() {
+        when:
+        go '/errors/throwErrorInInterceptor'
+
+        then:
+        $().text() == 'Message = Interceptor threw error'
+    }
+
     @Issue('grails/grails-core#9183')
     void "Test that an after interceptor can render text and return false to disable view rendering"() {
         when:
