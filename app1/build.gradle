@@ -69,12 +69,17 @@ dependencies {
 
   console "org.grails:grails-console"
 
-  runtime project(':loadfirst'), project(':loadsecond')
+  compile project(':loadfirst'), project(':loadsecond')
 }
 
 tasks.withType(org.gradle.api.tasks.JavaExec) {
     systemProperty('REPLACE_ME', 'test')
+    systemProperty('foo.bar', 'test')
+    // jvmArgs '-javaagent:agent.jar'
 }
 test {
-    systemProperty('REPLACE_ME', 'test') 
+    systemProperty('REPLACE_ME', 'test')
+    systemProperty('foo.bar', 'test')
 }
+
+//compileGroovy.groovyOptions.forkOptions.jvmArgs = [ '-Dgrails.full.stacktrace=true', "-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005", "-Xdebug"]
