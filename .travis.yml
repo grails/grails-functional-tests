@@ -8,9 +8,12 @@ env:
   - TERM=dumb
   - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=372m -XX:+CMSClassUnloadingEnabled"
 jdk:
-  - oraclejdk8
-  - oraclejdk7
-  - openjdk7
-before_install: rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*  
+- oraclejdk8
+- oraclejdk7
+- openjdk7
+before_install: rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*
 script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test
 after_failure: ./travis/junit-errors-to-stdout.sh
+notifications:
+  slack:
+    secure: Tgn1sBoxbz8qgqirJYufou/jJxQfQG4bIgnZn8f7uavwJJC7P2svM07GcTe730HTXjB7i94S7dcC0lFqSFzUx0LLEivUAJI3H7TmPQPk8FRUpC2yS7RAxnodHlleB/yKo4RPvEJYLeCwNSwbk62JPT9oq05Xct10+EOTlXql+Q4=
