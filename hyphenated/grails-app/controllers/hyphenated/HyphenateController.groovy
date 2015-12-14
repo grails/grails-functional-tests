@@ -16,4 +16,8 @@ class HyphenateController {
     def longName8() {}
     def longName9() {}
     def longName10() {}
+
+    def someActionWhichReturnsMap() {
+        [companyName: 'OCI']
+    }
 }

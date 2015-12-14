@@ -26,4 +26,12 @@ class HyphenateControllerSpec extends GebSpec {
         then:"The title is correct"
         	$().text() == 'good'
     }
+
+    void 'test action which returns map'() {
+        when:
+        go '/hyphenate/some-action-which-returns-map'
+
+        then:
+        $('h2').text() == 'Company Name: OCI'
+    }
 }
