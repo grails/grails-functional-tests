@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <meta name="layout" content="main" />
+    </head>
     <body>
         <h2>People</h2>
         <ul>
