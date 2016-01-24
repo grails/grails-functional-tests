@@ -33,4 +33,8 @@ class MiscController {
 
     	render "[${config.foo.bar} ${config.getProperty('foo.bar')} ${testProperty}]"
     }
+
+	def hello() {
+	    [helperFilterRan: params.helperBeforeFilterRan]
+	}
 }
