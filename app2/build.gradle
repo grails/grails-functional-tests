@@ -69,6 +69,12 @@ dependencies {
 
 
     console "org.grails:grails-console"
+
+    // This is an approach to support filters in Grails 3.1
+    // without needing the grails-filters plugin.  If
+    // filters behavior is ever to evolve, the plugin
+    // will still be needed.
+    compile 'org.grails:grails-plugin-filters:3.0.12'
 }
 
 task wrapper(type: Wrapper) {
