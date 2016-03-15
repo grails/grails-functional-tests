@@ -53,4 +53,24 @@ class ForwardingSpec extends GebSpec {
             $('li', text: 'Jake')
             $('li', text: 'Betsy')
     }
+
+    void "Test forward after populating flash"() {
+        when: 'an acton populates flash and then forwards'
+        go '/forwarding/putMessageInFlash'
+
+        then: 'the flash data is available in the action that was forwarded to'
+        $().text() == 'flash.message is some message'
+
+        when: 'a subsequent request is initiated'
+        go '/forwarding/displayFlash'
+
+        then: 'the flash data is still available'
+        $().text() == 'flash.message is some message'
+
+        when: 'any furuther request is initiated'
+        go '/forwarding/displayFlash'
+
+        then: 'the flash message has been cleared'
+        $().text() == 'flash.message is null'
+    }
 }
