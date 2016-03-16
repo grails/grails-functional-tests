@@ -10,6 +10,9 @@ class ErrorsController {
     def throwCustomError() {
         throw new CustomException("Something bad")
     }
+    def throwException() {
+        throw new Exception("Oops!")
+    }
 
     def throwGeneralError() {
         throw new IllegalStateException("Something went wrong")

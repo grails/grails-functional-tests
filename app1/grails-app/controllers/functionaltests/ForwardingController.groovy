@@ -25,4 +25,13 @@ class ForwardingController {
     def list() {
         [people: ['Jeff', 'Jake', 'Zack', 'Betsy']]
     }
+
+    def putMessageInFlash() {
+        flash.message = 'some message'
+        forward action: 'displayFlash'
+    }
+
+    def displayFlash() {
+        render "flash.message is ${flash.message}"
+    }
 }
