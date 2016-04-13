@@ -24,12 +24,12 @@ class NotFoundHandlerSpec extends GebSpec {
             go '/foo/index'
 
         then:"The 404 handler is rendered"
-        	$('title').text() == "Page Not Found"
+        	title == "Page Not Found"
 
         when:"No response.sendError(404) method is called"
             go '/foo/index?user=admin'
 
         then:"The 404 handler is not executed"
-            $('title').text() == "Foo List"            
+            title == "Foo List"            
     }
 }
