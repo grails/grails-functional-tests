@@ -32,6 +32,5 @@ class ForwardingController {
     }
 
     def displayFlash() {
-        render "flash.message is ${flash.message}"
     }
 }
