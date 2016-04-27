@@ -53,7 +53,7 @@ dependencies {
     compile "org.grails:grails-dependencies"
     compile "org.grails:grails-web-boot"
 
-    compile "org.grails.plugins:hibernate:4.3.8.0.BUILD-SNAPSHOT"
+    compile "org.grails.plugins:hibernate"
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
 
