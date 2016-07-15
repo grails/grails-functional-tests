@@ -6,7 +6,7 @@ import grails.transaction.*
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.*
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class UserSpec extends Specification {
 

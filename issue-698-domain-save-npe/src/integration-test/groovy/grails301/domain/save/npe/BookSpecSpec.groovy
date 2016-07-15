@@ -5,7 +5,7 @@ import grails.test.mixin.integration.Integration
 import grails.transaction.*
 import spock.lang.*
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class BookSpecSpec extends Specification {
 

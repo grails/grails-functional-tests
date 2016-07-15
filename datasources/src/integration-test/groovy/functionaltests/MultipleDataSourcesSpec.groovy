@@ -1,6 +1,6 @@
 package functionaltests
 
-
+import datasources.Application
 import grails.test.mixin.integration.Integration
 import grails.transaction.*
 import spock.lang.*
@@ -10,7 +10,7 @@ import ds2.Book as SecondBook
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class MultipleDataSourcesSpec extends Specification {
 
