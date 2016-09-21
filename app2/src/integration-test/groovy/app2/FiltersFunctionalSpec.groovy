@@ -2,10 +2,11 @@ package app2
 
 import grails.test.mixin.integration.Integration
 
-//import spock.lang.*
+import spock.lang.*
 import geb.spock.*
 
 @Integration
+@Ignore
 class FiltersFunctionalSpec extends GebSpec {
 
     void 'test before filter'() {
