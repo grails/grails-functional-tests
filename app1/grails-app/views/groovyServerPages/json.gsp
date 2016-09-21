@@ -1,0 +1,1 @@
+<%@ page contentType="application/json" %>{"foo":"bar"}
