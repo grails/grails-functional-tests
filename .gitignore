@@ -3,6 +3,7 @@ classes
 .gradle
 build/
 *.iml
-
+.asscache
+classes/
 # Ignore Gradle GUI config
 gradle-app.setting

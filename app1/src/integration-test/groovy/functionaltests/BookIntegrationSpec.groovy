@@ -44,4 +44,18 @@ class BookIntegrationSpec extends Specification {
         title        | count
         "The Stand"  | 2
     }
+
+
+    def "test toUpperCase"() {
+        given:
+        def result = value.toUpperCase()
+
+        expect:
+        result == expectedResult
+
+        where:
+        value | expectedResult
+        'King Crimson' | 'KING CRIMSON'
+        'Riverside'    | 'RIVERSIDE'
+    }
 }

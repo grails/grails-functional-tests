@@ -50,5 +50,20 @@ class ErrorsFunctionalSpec extends GebSpec {
             go '/errors/notFoundTest'
         then:"Make sure the global 404 handler is triggered"
             driver.pageSource.contains 'Page Not Found'
-    }    
+    }
+
+    @Issue("https://github.com/grails/grails-core/issues/9548")
+    void "Test Interceptor.afterView() has access to the exception if thrown"() {
+        expect:
+        !System.properties[ErrorsControllerInterceptor.PROPERTY]
+
+        when: "An action that throws an exception is requested"
+        go '/errors/throwException'
+
+        then:
+        System.properties[ErrorsControllerInterceptor.PROPERTY] == 'Oops!'
+
+        cleanup:
+        System.clearProperty ErrorsControllerInterceptor.PROPERTY
+    }
 }
