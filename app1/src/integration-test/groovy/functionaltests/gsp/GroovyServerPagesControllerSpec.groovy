@@ -29,18 +29,20 @@ class GroovyServerPagesControllerSpec extends Specification {
             response.status == 200
             response.text
             response.text.contains(content)
+        and:
+            response.getHeaders().getFirst('Content-Type').startsWith(expectedContentType)
 
         where:
-            action           | content
-            "html"           | "<div>This content should be rendered</div>"
-            "renderHTML"     | "<div>This content should be rendered</div>"
-            "json"           | "{\"foo\":\"bar\"}"
-            "renderJSON"     | "{\"foo\":\"bar\"}"
-            "markdown"       | "# H1"
-            "renderMarkdown" | "# H1"
-            "xml"            | "<Foo bar=\"true\">"
-            "renderXML"      | "<Foo bar=\"true\">"
-            "svg"            | "</svg>"
-            "renderSVG"      | "</svg>"
+            action           | content                                      | expectedContentType
+            "html"           | "<div>This content should be rendered</div>" | "text/html"
+            "renderHTML"     | "<div>This content should be rendered</div>" | "text/html"
+            "json"           | "{\"foo\":\"bar\"}"                          | "application/json"
+            "renderJSON"     | "{\"foo\":\"bar\"}"                          | "application/json"
+            "markdown"       | "# H1"                                       | "text/markdown"
+            "renderMarkdown" | "# H1"                                       | "text/markdown"
+            "xml"            | "<Foo bar=\"true\">"                         | "text/xml"
+            "renderXML"      | "<Foo bar=\"true\">"                         | "text/xml"
+            "svg"            | "</svg>"                                     | "image/svg+xml"
+            "renderSVG"      | "</svg>"                                     | "image/svg+xml"
     }
 }
