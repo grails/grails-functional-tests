@@ -83,6 +83,10 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
+    cors:
+        enabled: true
+        mappings:
+            /api/**: default
 
 ---
 dataSource:
