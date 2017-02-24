@@ -1,3 +1,5 @@
+package functionaltests
+
 import functionaltests.*
 
 class UrlMappings {

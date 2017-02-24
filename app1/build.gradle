@@ -9,23 +9,16 @@ buildscript {
     }
 }
 
-plugins {
-    id "io.spring.dependency-management" version "0.5.2.RELEASE"
-}
-
 version "0.1"
 group "functionaltests"
 
-apply plugin: "spring-boot"
 apply plugin: "war"
 apply plugin: "asset-pipeline"
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
-apply plugin: "maven"
-apply plugin: "idea"
 
 ext {
-  gradleWrapperVersion = project.gradleWrapperVersion
+    gradleWrapperVersion = project.gradleWrapperVersion
 }
 
 assets {
@@ -34,8 +27,8 @@ assets {
 }
 
 repositories {
-  mavenLocal()
-  maven { url "http://repo.grails.org/grails/core" }
+    mavenLocal()
+    maven { url "http://repo.grails.org/grails/core" }
 }
 
 dependencyManagement {
@@ -46,33 +39,34 @@ dependencyManagement {
 }
 
 dependencies {
-  compile "org.springframework.boot:spring-boot-starter-logging"
-  compile "org.springframework.boot:spring-boot-starter-actuator"
-  compile "org.springframework.boot:spring-boot-autoconfigure"
-  compile "org.springframework.boot:spring-boot-starter-tomcat"
-  compile "org.grails:grails-dependencies"
-  compile "org.grails:grails-web-boot"
+    compile "org.springframework.boot:spring-boot-starter-logging"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-autoconfigure"
+    compile "org.springframework.boot:spring-boot-starter-tomcat"
+    compile "org.grails:grails-dependencies"
+    compile "org.grails:grails-web-boot"
 
     compile "org.grails.plugins:hibernate4"
     compile "org.hibernate:hibernate-core:4.3.10.Final"
     compile "org.hibernate:hibernate-ehcache:4.3.10.Final"
     compile "org.grails.plugins:cache"
 
-  runtime "org.grails.plugins:asset-pipeline"
-  runtime "org.grails.plugins:scaffolding"
+    runtime "org.grails.plugins:asset-pipeline"
+    runtime "org.grails.plugins:scaffolding"
+    runtime "org.apache.tomcat:tomcat-jdbc"
 
-  testCompile "org.grails:grails-plugin-testing"
-  testCompile "org.grails.plugins:geb:1.0.1"
-  testCompile 'org.gebish:geb-core:0.12.2'
+    testCompile "org.grails:grails-plugin-testing"
+    testCompile "org.grails.plugins:geb:1.0.1"
+    testCompile 'org.gebish:geb-core:0.12.2'
 
-  // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
-  testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1'
-  testRuntime 'net.sourceforge.htmlunit:htmlunit:2.18'
-  //testCompile 'com.github.detro:phantomjsdriver:1.2.0'
+    // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
+    testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1'
+    testRuntime 'net.sourceforge.htmlunit:htmlunit:2.18'
+    //testCompile 'com.github.detro:phantomjsdriver:1.2.0'
 
-  console "org.grails:grails-console"
+    console "org.grails:grails-console"
 
-  compile project(':loadfirst'), project(':loadsecond')
+    compile project(':loadfirst'), project(':loadsecond')
 }
 
 tasks.withType(org.gradle.api.tasks.JavaExec) {

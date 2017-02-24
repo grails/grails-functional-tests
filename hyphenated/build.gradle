@@ -12,18 +12,10 @@ buildscript {
     }
 }
 
-plugins {
-    id "io.spring.dependency-management" version "0.5.2.RELEASE"
-}
-
 version "0.1"
 group "hyphenated"
 
-apply plugin: "spring-boot"
-apply plugin: "war"
 apply plugin: "asset-pipeline"
-apply plugin: 'eclipse'
-apply plugin: 'idea'
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 
@@ -65,6 +57,7 @@ dependencies {
     compile "org.grails.plugins:scaffolding"
 
     runtime "org.grails.plugins:asset-pipeline"
+    runtime "org.apache.tomcat:tomcat-jdbc"
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"

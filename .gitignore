@@ -3,6 +3,8 @@ classes
 .gradle
 build/
 *.iml
+*.log
+*.db
 .asscache
 classes/
 # Ignore Gradle GUI config

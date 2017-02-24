@@ -1,3 +1,5 @@
+package gorm
+
 import gorm.*
 
 class BootStrap {

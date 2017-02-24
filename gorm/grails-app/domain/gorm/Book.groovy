@@ -1,11 +1,14 @@
 package gorm
 
+import static grails.gorm.hibernate.mapping.MappingBuilder.*
+
 class Book {
 
     def testService
 
     String title
 
-    static constraints = {
+    static mapping = orm {
+        autowire true
     }
 }

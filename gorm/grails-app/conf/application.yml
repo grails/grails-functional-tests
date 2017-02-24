@@ -69,6 +69,10 @@ grails:
                 staticparts: none
 
 ---
+grails:
+  transaction:
+    chainedTransactionManager:
+      enabled: true
 hibernate:
   cache:
     use_second_level_cache: true

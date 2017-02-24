@@ -20,9 +20,8 @@ class MultipleDataSourcesSpec extends Specification {
             new Book(title:"One").save(flush:true)
             new Book(title:"Two").save(flush:true)
             new SecondBook(title:"Three").save(flush:true)
-
         then:
-            Book.count() == 2
+            Book.count() == 3
             SecondBook.count() == 1
             SecondBook.secondary.count() == 1
     }
