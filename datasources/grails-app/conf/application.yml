@@ -69,6 +69,10 @@ grails:
                 staticparts: none
 
 ---
+grails:
+  transaction:
+    chainedTransactionManager:
+      enabled: true
 dataSources:
     dataSource:
         pooled: true
