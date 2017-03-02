@@ -1,5 +1,6 @@
 package functionaltests.cors
 
+import grails.core.GrailsApplication
 import grails.web.mapping.cors.GrailsCorsConfiguration
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
