@@ -20,13 +20,30 @@ class UploadControllerSpec extends GebSpec {
             def f = File.createTempFile("uploadtest", "txt")
             f.deleteOnExit()
             f.text = "Test upload"
-            def form = $('form')
+            def form = $('#myForm')
 
             form.myFile = f.absolutePath
-            $('input', type:'submit').click()
+            $('#input1').click()
 
         then:"The file is uploaded"
             $('p').text() == 'Test upload'
+
+    }
+
+    void "Test file upload parameters"() {
+        when:"When go to an upload page"
+        go "/upload/index"
+
+        def f = File.createTempFile("uploadtest", "txt")
+        f.deleteOnExit()
+        f.text = "Test upload"
+        def form = $('#myForm2')
+
+        form.myFile = f.absolutePath
+        $('#input2').click()
+
+        then:"The file is uploaded"
+        $('p').text() == 'ok'
 
     }
 }
