@@ -58,7 +58,7 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache:4.3.10.Final"
     compile "org.grails.plugins:cache"
 
-  runtime "org.grails.plugins:asset-pipeline"
+  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
   compile "org.grails.plugins:scaffolding"
 
   testCompile "org.grails:grails-plugin-testing"
