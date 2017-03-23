@@ -64,7 +64,7 @@ dependencies {
 
     compile "org.grails.plugins:scaffolding"
 
-    runtime "org.grails.plugins:asset-pipeline"
+    runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
