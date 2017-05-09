@@ -19,6 +19,23 @@ class ForwardingSpec extends GebSpec {
     def cleanup() {
     }
 
+    void "params extracted from the URL path by a custom UrlMapping are forwarded"() {
+
+        when: 'a url mapping such as /forward/$param1 is matched'
+        go '/forward/test'
+
+        then: 'param1 is passed to the forwarded action'
+        $().text() == 'Forward Destination. Params: test'
+    }
+
+    void "verifies params from the original url are passed to the forwarded action but not duplicated"() {
+        when:
+        go '/forwarding/two?param1=test'
+
+        then:
+        $().text() == 'Forward Destination. Params: test'
+    }
+
     void "Test forward to same controller"() {
         when:"A forward is issued to an action in the same controller"
             go '/forwarding/one'

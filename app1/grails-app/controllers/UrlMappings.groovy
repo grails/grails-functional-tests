@@ -16,6 +16,8 @@ class UrlMappings {
         "/customErrorWithName/$name/"(controller: 'customError')
         "/customErrorWithId/$id/"(controller: 'customError')
 
+        "/forward/$param1"(controller: 'forwarding', action: 'two')
+
         "/"(view:"/index")
         "500"(controller: "customError", action: 'handleError', exception: CustomErrorException)
         "500"(view:'/error')
