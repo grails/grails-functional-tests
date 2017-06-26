@@ -61,7 +61,7 @@ dependencies {
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
     runtime "org.grails.plugins:scaffolding"
 
-    testCompile "org.grails:grails-plugin-testing"
+    testCompile "org.grails:grails-test-mixins:3.3.0.RC1"
     testCompile "org.grails.plugins:geb:1.0.2"
 
     // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
