@@ -55,8 +55,7 @@ dependencies {
     compile "org.grails.plugins:scaffolding"
     runtime "org.apache.tomcat:tomcat-jdbc"
 
-    testCompile "org.grails.plugins:geb:1.0.1"
-    testCompile 'org.gebish:geb-core:0.12.2'
+    testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-test-mixins:3.3.0.RC1"
     // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
     testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1'
