@@ -47,9 +47,9 @@ dependencies {
     compile "org.grails:grails-dependencies"
     compile "org.grails:grails-web-boot"
 
-    compile "org.grails.plugins:hibernate4"
-    compile "org.hibernate:hibernate-core:4.3.10.Final"
-    compile "org.hibernate:hibernate-ehcache:4.3.10.Final"
+    compile "org.grails.plugins:hibernate5"
+    compile "org.hibernate:hibernate-core"
+    compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:cache"
 
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
