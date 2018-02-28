@@ -1,4 +1,5 @@
 package functionaltests
+
 import grails.test.mixin.TestFor
 import spock.lang.Issue
 import spock.lang.Specification
