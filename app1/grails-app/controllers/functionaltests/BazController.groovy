@@ -13,4 +13,8 @@ class BazController {
         def baz = new Baz(name: params.name).save(flush: true)
         redirect action: "index", params: [id: baz?.id]
     }
+
+    def newUrl() {
+        render params as JSON
+    }
 }
