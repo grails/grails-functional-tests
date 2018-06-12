@@ -64,7 +64,7 @@ dependencies {
 
     console "org.grails:grails-console"
 
-    compile project(':loadfirst'), project(':loadsecond')
+    compile project(':loadfirst'), project(':loadsecond'), project(':loadafter')
 }
 
 tasks.withType(org.gradle.api.tasks.JavaExec) {
