@@ -15,6 +15,21 @@ ext {
         throw new GradleException("Multiple Grails versions (${grailsVersionList}) found at $coreBuildFilePath")
     }
     grailsVersion = grailsVersionList[0]
+
+    def gormVersionNumberRegex = /^\s*datastoreVersion\s*=\s*['|"](.*)['|"]\s*$/
+    def gormVersionList = []
+    coreBuildFileUrl.eachLine { line ->
+        def matcher = (line =~ gormVersionNumberRegex)
+        if(matcher) {
+            gormVersionList << matcher[0][1]
+        }
+    }
+    if(!gormVersionList) {
+        throw new GradleException("Could not find Gorm version at $coreBuildFilePath")
+    } else if(gormVersionList.size() > 1) {
+        throw new GradleException("Multiple Gorm versions (${gormVersionList}) found at $coreBuildFilePath")
+    }
+    gormVersion = gormVersionList[0]
 }
 
 subprojects {

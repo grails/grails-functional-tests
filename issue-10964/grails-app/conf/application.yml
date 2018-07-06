@@ -98,12 +98,24 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
-            url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            driverClassName: org.postgresql.Driver
+            dialect: org.hibernate.dialect.PostgreSQL94Dialect
+            dbCreate: update
+            embeddedPostgres: true
+            embeddedPort: 56566
+            url: jdbc:postgresql://localhost:56566/postgres?autoReconnect=true&characterEncoding=UTF-8
+            username: postgres
+            password: postgres
     test:
         dataSource:
+            driverClassName: org.postgresql.Driver
+            dialect: org.hibernate.dialect.PostgreSQL94Dialect
             dbCreate: update
-            url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            embeddedPostgres: true
+            embeddedPort: 56566
+            url: jdbc:postgresql://localhost:56566/postgres?autoReconnect=true&characterEncoding=UTF-8
+            username: postgres
+            password: postgres
     production:
         dataSource:
             dbCreate: none
