@@ -5,25 +5,26 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:1.4"
-        classpath "org.grails.plugins:hibernate5:${gormVersion-".RELEASE"}"
-        classpath "org.grails.plugins:views-gradle:1.1.6"
+        classpath "org.grails.plugins:views-gradle:1.2.8"
     }
 }
 
 version "0.1"
 group "issueviews182"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"war"
 apply plugin:"org.grails.grails-web"
-apply plugin:"com.energizedwork.webdriver-binaries"
 apply plugin:"org.grails.plugins.views-json"
 
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.grails:grails-bom:$grailsVersion"
+    }
+    applyMavenExclusions false
 }
 
 dependencies {
@@ -56,12 +57,6 @@ dependencies {
     testCompile "org.grails:grails-gorm-testing-support"
     testCompile "org.grails:grails-datastore-rest-client"
     testCompile "org.grails:grails-web-testing-support"
-    testCompile "org.grails.plugins:geb"
-    testCompile "org.seleniumhq.selenium:selenium-remote-driver:3.6.0"
-    testCompile "org.seleniumhq.selenium:selenium-api:3.6.0"
-    testCompile "org.seleniumhq.selenium:selenium-support:3.6.0"
-    testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:3.6.0"
-    testRuntime "org.seleniumhq.selenium:selenium-firefox-driver:3.6.0"
 }
 
 bootRun {
@@ -69,14 +64,4 @@ bootRun {
     addResources = true
     String springProfilesActive = 'spring.profiles.active'
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
-}
-
-webdriverBinaries {
-    chromedriver '2.35'
-    geckodriver '0.19.1'
-}
-
-tasks.withType(Test) {
-    systemProperty "geb.env", System.getProperty('geb.env')
-    systemProperty "geb.build.reportsDir", reporting.file("geb/integrationTest")
 }
