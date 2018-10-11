@@ -3,10 +3,13 @@ package issue11102
 class UrlMappings {
 
     static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
+
+        name testMapping: '/get1'(controller: 'test') {
+            action = [GET: 'get1']
+        }
+
+        name testMapping2: '/get2'(controller: 'test') {
+            action = [GET: 'get2']
         }
 
         "/"(view:"/index")
