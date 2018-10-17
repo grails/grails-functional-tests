@@ -1,5 +1,5 @@
 include 'app1','app2', 'app3','datasources','namespaces', 'gorm','loadfirst', 'loadsecond', 'loadafter',
-        'issue-698-domain-save-npe', 'hyphenated', 'issue-views-182', 'issue-11102', 'issue11005'
+        'issue-698-domain-save-npe', 'hyphenated', 'issue-views-182', 'issue-11102', 'issue11005', 'grails-core-11050'
 
 project(':loadfirst').projectDir = new File('plugins/loadfirst')
 project(':loadsecond').projectDir = new File('plugins/loadsecond')
