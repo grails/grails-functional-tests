@@ -15,10 +15,9 @@ before_install:
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails.plugins/*
   - rm -rf ~/.m2/repository/org/grails/plugins/*
-  - JAVA_HOME=$(jdk_switcher home openjdk8) ./gradlew
 before_script:
   - rm -rf target
-script: JAVA_HOME=$(jdk_switcher home openjdk7) "./travis-build.sh"
+script: ./travis-build.sh
 after_failure: ./travis/junit-errors-to-stdout.sh
 notifications:
   slack:
