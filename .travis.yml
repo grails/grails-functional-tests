@@ -9,13 +9,13 @@ env:
   - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=372m -XX:+CMSClassUnloadingEnabled"
 jdk:
 - oraclejdk8
-#- oraclejdk7
+- openjdk11
 #- openjdk7
 before_install: 
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails.plugins/*
   - rm -rf ~/.m2/repository/org/grails/plugins/*
-script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test
+script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test --continue
 after_failure: ./travis/junit-errors-to-stdout.sh
 notifications:
   slack:
