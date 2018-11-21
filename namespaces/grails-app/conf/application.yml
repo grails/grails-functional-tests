@@ -77,7 +77,8 @@ dataSource:
     password:
 
 server:
-    contextPath: "/myApp"
+    servlet:
+        context-path: "/myApp"
 
 environments:
     development:
@@ -86,7 +87,8 @@ environments:
             url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
         server:
-            contextPath: "/myAppTest"
+            servlet:
+                context-path: "/myAppTest"
         dataSource:
             dbCreate: update
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
