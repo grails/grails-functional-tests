@@ -61,6 +61,8 @@ dependencies {
 
     // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
     testRuntime 'org.seleniumhq.selenium:htmlunit-driver:2.33.3'
+    testRuntime "org.seleniumhq.selenium:selenium-api:3.141.59"
+    testRuntime "org.seleniumhq.selenium:selenium-support:3.141.59"
 
 
     console "org.grails:grails-console"
