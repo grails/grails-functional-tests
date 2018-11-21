@@ -1,3 +1,4 @@
+import ch.qos.logback.classic.Level
 import grails.util.BuildSettings
 import grails.util.Environment
 
@@ -10,6 +11,8 @@ appender('STDOUT', ConsoleAppender) {
 }
 
 root(ERROR, ['STDOUT'])
+
+logger("org.hibernate.SQL", TRACE)
 
 if(Environment.current == Environment.DEVELOPMENT) {
     def targetDir = BuildSettings.TARGET_DIR

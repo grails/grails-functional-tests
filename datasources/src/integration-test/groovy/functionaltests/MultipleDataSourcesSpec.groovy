@@ -21,7 +21,7 @@ class MultipleDataSourcesSpec extends Specification {
             }
             
         then:
-            Book.count() == 3
+            Book.count() == 2
             SecondBook.withTransaction { SecondBook.count() } == 1
             SecondBook.secondary.withTransaction { SecondBook.secondary.count() } == 1
     }
