@@ -1,8 +1,7 @@
 package gorm
 
-import grails.test.mixin.TestFor
-import grails.test.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import spock.lang.Specification
 
 /**

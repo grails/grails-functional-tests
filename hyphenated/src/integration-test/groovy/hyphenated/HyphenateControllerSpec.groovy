@@ -1,8 +1,7 @@
 package hyphenated
 
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
-
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import spock.lang.*
 import geb.spock.*
 

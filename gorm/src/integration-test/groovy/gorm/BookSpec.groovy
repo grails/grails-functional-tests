@@ -1,15 +1,10 @@
 package gorm
 
-
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
-import org.grails.datastore.gorm.query.transform.ApplyDetachedCriteriaTransform
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.*
 
-/**
- * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
- */
 @Integration(applicationClass = Application)
 @Rollback
 class BookSpec extends Specification {
@@ -32,9 +27,4 @@ class BookSpec extends Specification {
 
     }
 
-    void "Test that services are autowired on construction and retrieval"() {
-        expect:
-            new Book().testService
-            Book.first().testService
-    }
 }

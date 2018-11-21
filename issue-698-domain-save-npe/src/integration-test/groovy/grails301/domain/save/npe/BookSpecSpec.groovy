@@ -1,8 +1,7 @@
 package grails301.domain.save.npe
 
-
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import spock.lang.*
 
 @Integration(applicationClass = Application)

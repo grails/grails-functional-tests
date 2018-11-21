@@ -1,8 +1,8 @@
 package hyphenated
 
 import geb.spock.GebSpec
-import grails.test.mixin.integration.Integration
-import grails.transaction.Rollback
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 
 @Integration(applicationClass = Application)
 @Rollback

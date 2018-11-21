@@ -1,6 +1,5 @@
 package functionaltests
 /**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
 class BookHibernateSpec extends grails.test.hibernate.HibernateSpec {
     def setup() {

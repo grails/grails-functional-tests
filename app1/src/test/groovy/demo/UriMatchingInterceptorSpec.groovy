@@ -1,11 +1,9 @@
 package demo
 
-
-import grails.test.mixin.TestFor
+import grails.testing.web.interceptor.InterceptorUnitTest
 import spock.lang.Specification
 
-@TestFor(UriMatchingInterceptor)
-class UriMatchingInterceptorSpec extends Specification {
+class UriMatchingInterceptorSpec extends Specification implements InterceptorUnitTest<UriMatchingInterceptor> {
 
     void "Test uri matching interceptor"() {
         when:

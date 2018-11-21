@@ -1,8 +1,7 @@
 package functionaltests
 
-import grails.test.mixin.integration.Integration
-
 import geb.spock.GebSpec
+import grails.testing.mixin.integration.Integration
 import spock.lang.Issue
 
 @Integration

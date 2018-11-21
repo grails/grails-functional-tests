@@ -1,15 +1,11 @@
 package functionaltests
 
-import grails.test.mixin.integration.Integration
-import grails.transaction.Transactional
-
-import spock.lang.*
 import geb.spock.*
-
+import grails.testing.mixin.integration.Integration
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.*
 
 /**
- * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
 @Integration(applicationClass=functionaltests.Application)
 class i18nSpec extends GebSpec {

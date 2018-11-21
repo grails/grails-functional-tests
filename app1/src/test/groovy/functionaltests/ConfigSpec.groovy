@@ -1,5 +1,6 @@
 package functionaltests
 
+import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
 /*
@@ -18,12 +19,10 @@ import spock.lang.Specification
  * limitations under the License.
  */
 
-import grails.test.mixin.TestFor
 /**
  * @author graemerocher
  */
-@TestFor(BookController)
-class ConfigSpec extends Specification{
+class ConfigSpec extends Specification implements ControllerUnitTest<BookController> {
 
     void "Test configuration values"() {
         expect:

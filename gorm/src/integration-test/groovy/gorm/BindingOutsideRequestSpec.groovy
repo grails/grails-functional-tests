@@ -1,10 +1,11 @@
 package gorm
 
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
+
 /**
  * Created by graemerocher on 31/01/2017.
  */
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
 import grails.util.GrailsWebMockUtil
 import spock.lang.*
 

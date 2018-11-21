@@ -1,5 +1,7 @@
 package functionaltests
 
+import grails.testing.mixin.integration.Integration
+
 /*
  * Copyright 2014 original authors
  *
@@ -17,7 +19,6 @@ package functionaltests
  */
 
 
-import grails.test.mixin.integration.Integration
 import grails.transaction.*
 
 import spock.lang.*

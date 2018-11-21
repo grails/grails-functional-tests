@@ -1,13 +1,9 @@
 package gorm
 
-
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import spock.lang.*
 
-/**
- * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
- */
 @Integration(applicationClass = Application)
 @Rollback
 class AbstractParentSpec extends Specification {

@@ -1,14 +1,12 @@
 package functionaltests
 
-
-import grails.test.mixin.TestFor
+import grails.testing.web.interceptor.InterceptorUnitTest
 import spock.lang.Specification
 
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(BookInterceptor)
-class BookInterceptorSpec extends Specification {
+class BookInterceptorSpec extends Specification implements InterceptorUnitTest<BookInterceptor> {
 
     def setup() {
     }

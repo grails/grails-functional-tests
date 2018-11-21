@@ -1,8 +1,7 @@
 package gorm
 
-
-import grails.test.mixin.integration.Integration
-import grails.transaction.*
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.*
 

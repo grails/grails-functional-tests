@@ -1,13 +1,10 @@
 package functionaltests
 
-
-
-import grails.test.mixin.*
+import grails.testing.gorm.DomainUnitTest
+import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.*
 
-@TestFor(BookController)
-@Mock(Book)
-class BookControllerSpec extends Specification {
+class BookControllerSpec extends Specification implements ControllerUnitTest<BookController>, DomainUnitTest<Book> {
 
     def populateValidParams(params) {
         assert params != null

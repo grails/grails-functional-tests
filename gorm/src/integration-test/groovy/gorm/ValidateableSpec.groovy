@@ -1,6 +1,6 @@
 package gorm
 
-import grails.test.mixin.integration.Integration
+import grails.testing.mixin.integration.Integration
 import spock.lang.Specification
 
 @Integration(applicationClass = Application)
