@@ -1,7 +1,7 @@
 package app2
 
+import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
-import grails.transaction.*
 import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.*
 import geb.spock.*

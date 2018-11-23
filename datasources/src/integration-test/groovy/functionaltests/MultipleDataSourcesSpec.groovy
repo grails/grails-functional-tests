@@ -1,8 +1,8 @@
 package functionaltests
 
 import datasources.Application
+import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
-import grails.transaction.*
 import spock.lang.*
 import ds1.Book
 import ds2.Book as SecondBook

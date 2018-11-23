@@ -1,5 +1,6 @@
 package functionaltests
 
+import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 
 /*
@@ -19,7 +20,6 @@ import grails.testing.mixin.integration.Integration
  */
 
 
-import grails.transaction.*
 
 import spock.lang.*
 import geb.spock.*
