@@ -86,7 +86,7 @@ grails:
     cors:
         enabled: true
         mappings:
-            /api/**: default
+            '[/api/**]': default
 
 ---
 dataSource:
