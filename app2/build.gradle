@@ -6,9 +6,9 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.14.1'
+        classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
-
 
 version "0.1"
 group "app2"
@@ -16,6 +16,7 @@ group "app2"
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 apply plugin: "asset-pipeline"
+apply plugin:"com.energizedwork.webdriver-binaries"
 
 ext {
     gradleWrapperVersion = project.gradleWrapperVersion
@@ -57,14 +58,6 @@ dependencies {
     testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
     testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
-    testCompile "org.grails.plugins:geb"
-
-    // Note: It is recommended to update to a more robust driver (Chrome, Firefox etc.)
-    testRuntime 'org.seleniumhq.selenium:htmlunit-driver:2.33.3'
-    testRuntime "org.seleniumhq.selenium:selenium-api:3.141.59"
-    testRuntime "org.seleniumhq.selenium:selenium-support:3.141.59"
-
-
     console "org.grails:grails-console"
 
     // This is an approach to support filters in Grails 3.1
@@ -73,6 +66,8 @@ dependencies {
     // will still be needed.
     // compile 'org.grails:grails-plugin-filters:3.0.12'
 }
+
+apply from: "${rootProject.projectDir}/gradle/geb.gradle"
 
 //integrationTest.jvmArgs = ['-verbose']
 task wrapper(type: Wrapper) {

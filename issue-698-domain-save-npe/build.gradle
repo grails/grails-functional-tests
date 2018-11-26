@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.14.1'
+        classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
 
@@ -15,6 +16,7 @@ group "grails301.domain.save.npe"
 apply plugin: "asset-pipeline"
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
+apply plugin:"com.energizedwork.webdriver-binaries"
 
 ext {
     gradleWrapperVersion = project.gradleWrapperVersion
@@ -57,15 +59,11 @@ dependencies {
     testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
     testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
-    testCompile "org.grails.plugins:geb"
-
-    testRuntime 'org.seleniumhq.selenium:htmlunit-driver:2.33.3'
-    testRuntime "org.seleniumhq.selenium:selenium-api:3.141.59"
-    testRuntime "org.seleniumhq.selenium:selenium-support:3.141.59"
-
-
     console "org.grails:grails-console"
 }
+
+apply from: "${rootProject.projectDir}/gradle/geb.gradle"
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
