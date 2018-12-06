@@ -1,4 +1,6 @@
-# Functional tests for Grails 3 image:https://travis-ci.org/grails/grails3-functional-tests.svg?branch=master["Build Status", link="https://travis-ci.org/grails/grails3-functional-tests"]
+# Functional tests for Grails 3 
+
+[![Build Status](https://travis-ci.org/grails/grails3-functional-tests.svg?branch=master)](https://travis-ci.org/grails/grails3-functional-tests)
 
 
 A Suite of functional tests for Grails 3
