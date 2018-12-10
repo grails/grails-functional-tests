@@ -54,7 +54,8 @@ dependencies {
     compile "org.grails.plugins:cache"
 
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
-    compile "org.grails.plugins:scaffolding"
+    runtime "org.grails.plugins:scaffolding:$scaffoldingVersion"
+    runtime "org.grails.plugins:fields:$fieldsVersion"
     runtime "org.apache.tomcat:tomcat-jdbc"
 
     testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"

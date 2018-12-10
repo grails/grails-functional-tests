@@ -56,7 +56,8 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:cache"
 
-    compile "org.grails.plugins:scaffolding"
+    runtime "org.grails.plugins:scaffolding:$scaffoldingVersion"
+    runtime "org.grails.plugins:fields:$fieldsVersion"
 
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
     runtime "org.apache.tomcat:tomcat-jdbc"
