@@ -59,7 +59,7 @@ dependencies {
     runtime "org.grails.plugins:scaffolding:$scaffoldingVersion"
     runtime "org.grails.plugins:fields:$fieldsVersion"
 
-    runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.1"
+    runtime "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
     runtime "org.apache.tomcat:tomcat-jdbc"
 
     testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
