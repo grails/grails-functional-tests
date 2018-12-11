@@ -1,13 +1,9 @@
 package functionaltests
 
+import geb.spock.GebSpec
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 
-import spock.lang.*
-import geb.spock.*
-
-/**
- */
 @Integration
 @Rollback
 class ConfigTestControllerSpec extends GebSpec {
@@ -29,6 +25,6 @@ class ConfigTestControllerSpec extends GebSpec {
         $('div', 3).text() == '1'
         $('div', 4).text() == 'test'
         $('div', 5).text() == '1'
-        $('div', 6).text() == '{bar=test, baz=1, bax=2}'
+        $('div', 6).text() == '{baz=1, bax=2, bar=test}'
     }
 }
