@@ -1,5 +1,5 @@
 ext {
-    def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/3.3.x/build.gradle'
+    def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/master/build.gradle'
     def coreBuildFileUrl = new URL(coreBuildFilePath)
     def versionNumberRegex = /^\s*grailsVersion\s*=\s*['|"](.*)['|"]\s*$/
     def grailsVersionList = []

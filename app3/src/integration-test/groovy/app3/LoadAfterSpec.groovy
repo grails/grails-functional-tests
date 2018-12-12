@@ -1,7 +1,7 @@
 package app3
 
 import geb.spock.GebSpec
-import grails.test.mixin.integration.Integration
+import grails.testing.mixin.integration.Integration
 
 @Integration
 class LoadAfterSpec extends GebSpec {
