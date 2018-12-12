@@ -10,3 +10,4 @@ classes/
 # Ignore Gradle GUI config
 gradle-app.setting
 out/
+.DS_Store
