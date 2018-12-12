@@ -20,7 +20,7 @@ ext {
 
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 targetCompatibility = 1.7
 
 
