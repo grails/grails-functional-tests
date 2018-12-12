@@ -11,12 +11,6 @@ import spock.lang.*
 @Rollback
 class BookIntegrationSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "create book and save"() {
         given:
         def book = new Book(title:"The Stand")

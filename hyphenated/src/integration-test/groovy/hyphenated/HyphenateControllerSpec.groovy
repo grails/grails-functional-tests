@@ -12,12 +12,6 @@ import geb.spock.*
 @Rollback
 class HyphenateControllerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "test something"() {
         when:"The home page is visited"
             go '/hyphenate/long-name'

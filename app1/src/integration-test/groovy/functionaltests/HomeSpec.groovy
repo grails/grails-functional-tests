@@ -9,12 +9,6 @@ import grails.testing.mixin.integration.Integration
 @Integration(applicationClass=functionaltests.Application)
 class HomeSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test the home page renders correctly"() {
         when:"The home page is visited"
             go '/'

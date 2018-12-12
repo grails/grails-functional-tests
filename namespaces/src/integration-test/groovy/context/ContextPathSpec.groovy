@@ -8,13 +8,6 @@ import grails.testing.mixin.integration.Integration
 @Rollback
 class ContextPathSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-
-    }
-
     void "test the context path defined in the environment overrides the standard one"() {
         when:
         go '/myAppTest'

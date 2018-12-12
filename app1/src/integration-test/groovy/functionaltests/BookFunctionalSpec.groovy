@@ -8,12 +8,6 @@ import grails.testing.mixin.integration.Integration
 @Integration(applicationClass=functionaltests.Application)
 class BookFunctionalSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
 //    @Value('${local.server.port}')
 //    int serverPort
 

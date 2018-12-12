@@ -8,12 +8,6 @@ import spock.lang.*
 @Rollback
 class ProductSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test unique constraint persistence"() {
         when:"A new unique product is created"
             def p = new Product(isbn: '123')

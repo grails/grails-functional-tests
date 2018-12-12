@@ -8,12 +8,6 @@ import grails.testing.mixin.integration.Integration
 @Rollback
 class FooFunctionalSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test that a scaffolded view is resolved correctly"() {
         when:
         go '/foo/index'

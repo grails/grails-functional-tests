@@ -14,12 +14,6 @@ import geb.spock.*
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class NotFoundHandlerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test that a 404 handler renders the view correctly when a forward is executed"() {
         when:"An action is visited where an interceptor uses response.sendError(404)"
             go '/foo/index'

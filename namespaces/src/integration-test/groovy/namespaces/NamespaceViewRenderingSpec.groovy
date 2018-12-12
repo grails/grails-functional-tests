@@ -11,12 +11,6 @@ import geb.spock.*
 @Rollback
 class NamespaceViewRenderingSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test view rendering works as expected when namespaces are used"() {
         when:"When an implicit namespace is used"
             go '/myAppTest/test/implicitView'

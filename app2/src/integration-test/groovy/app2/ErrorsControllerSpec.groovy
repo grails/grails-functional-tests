@@ -12,13 +12,6 @@ import geb.spock.*
 @Rollback
 class ErrorsControllerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-
     void "Test a global 500 mapping that maps to another controller"() {
         when:"An action that throws a error that is handled by a 500 mapping in UrlMappings.groovy"
             go '/test/throwGeneralError'

@@ -8,12 +8,6 @@ import grails.testing.mixin.integration.Integration
 @Rollback
 class ConfigTestControllerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test that configuration properties are correctly read"() {
         when:"When evaluting configuration values"
         go '/configTest/index'

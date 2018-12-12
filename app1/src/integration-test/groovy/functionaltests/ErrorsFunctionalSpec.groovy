@@ -12,12 +12,6 @@ import geb.spock.*
 @Rollback
 class ErrorsFunctionalSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test exception handling methods for internal controller exceptions"() {
         when:"An action that throws a custom error that is handled by a 500 mapping in UrlMappings.groovy"
             go '/errors/throwCustomError'

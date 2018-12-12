@@ -8,12 +8,6 @@ import grails.testing.mixin.integration.Integration
 @Rollback
 class FooBarControllerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "test returns null"() {
         when:"The home page is visited"
         go '/foo-bar/returns-null'

@@ -12,12 +12,6 @@ import geb.spock.*
 @Rollback
 class ForwardingSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test forward to same controller"() {
         when:"A forward is issued to an action in the same controller"
             go '/forwarding/one'

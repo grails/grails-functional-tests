@@ -12,12 +12,6 @@ import geb.spock.*
 @Rollback
 class PluginViewsControllerSpec extends GebSpec {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "Test that when plugin templates are rendered they render correctly"() {
         when:"A view that renders plugin templates is visisted"
             go '/pluginViews/testTemplateFromPlugin'
