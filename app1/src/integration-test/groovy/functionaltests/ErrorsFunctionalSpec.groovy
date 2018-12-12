@@ -8,7 +8,7 @@ import geb.spock.*
 
 /**
  */
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class ErrorsFunctionalSpec extends GebSpec {
 

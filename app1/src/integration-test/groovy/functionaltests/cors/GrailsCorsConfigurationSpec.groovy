@@ -1,12 +1,13 @@
 package functionaltests.cors
 
+import functionaltests.Application
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 import grails.web.mapping.cors.GrailsCorsConfiguration
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class GrailsCorsConfigurationSpec extends Specification {
 

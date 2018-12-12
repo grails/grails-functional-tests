@@ -9,7 +9,7 @@ import grails.testing.mixin.integration.Integration
 import grails.util.GrailsWebMockUtil
 import spock.lang.*
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class BindingOutsideRequestSpec extends Specification {
 

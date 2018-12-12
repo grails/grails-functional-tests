@@ -7,7 +7,7 @@ import spock.lang.*
 
 /**
  */
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class BookIntegrationSpec extends Specification {
 

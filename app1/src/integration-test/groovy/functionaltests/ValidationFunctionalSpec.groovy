@@ -4,7 +4,7 @@ import grails.testing.mixin.integration.Integration
 import spock.lang.*
 import geb.spock.*
 
-@Integration
+@Integration(applicationClass = Application)
 class ValidationFunctionalSpec extends GebSpec {
 
     @Issue('GRAILS-12039')

@@ -3,7 +3,7 @@ package functionaltests
 import geb.spock.*
 import grails.testing.mixin.integration.Integration
 
-@Integration(applicationClass=functionaltests.Application)
+@Integration(applicationClass = Application)
 class HomeSpec extends GebSpec {
 
     void "Test the home page renders correctly"() {

@@ -7,7 +7,7 @@ import geb.spock.*
 /**
  * @author graemerocher
  */
-@Integration
+@Integration(applicationClass = Application)
 class InterceptorDependencyInjectionSpec extends GebSpec {
 
     void "Test that interceptors are subjected to autowire by name"() {

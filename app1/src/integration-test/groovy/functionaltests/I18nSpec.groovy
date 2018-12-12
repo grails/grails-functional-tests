@@ -7,7 +7,7 @@ import org.springframework.context.*
 
 /**
  */
-@Integration(applicationClass=functionaltests.Application)
+@Integration(applicationClass = Application)
 class i18nSpec extends GebSpec {
 
     @Autowired

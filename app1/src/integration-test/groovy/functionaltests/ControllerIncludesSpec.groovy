@@ -27,7 +27,7 @@ import geb.spock.*
 /**
  * @author graemerocher
  */
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class ControllerIncludesSpec extends GebSpec {
 

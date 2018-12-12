@@ -1,10 +1,10 @@
 package functionaltests.chaining
 
-
+import functionaltests.Application
 import geb.spock.*
 import grails.testing.mixin.integration.Integration
 
-@Integration
+@Integration(applicationClass = Application)
 class ChainingToNamespacedControllersFunctionalSpec extends GebSpec {
 
     void "Test chaining to a namespaced controller"() {

@@ -1,10 +1,11 @@
 package functionaltests.sitemesh
 
+import functionaltests.Application
 import grails.testing.mixin.integration.Integration
 import spock.lang.*
 import geb.spock.*
 
-@Integration
+@Integration(applicationClass = Application)
 class SitemeshLayoutFunctionalSpec extends GebSpec {
 
     @Issue('GRAILS-12045')

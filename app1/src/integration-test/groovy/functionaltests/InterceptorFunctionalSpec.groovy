@@ -4,7 +4,7 @@ import geb.spock.GebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.Issue
 
-@Integration
+@Integration(applicationClass = Application)
 class InterceptorFunctionalSpec extends GebSpec {
 
     @Issue('grails/grails-core#9434')

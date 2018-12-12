@@ -7,7 +7,7 @@ import geb.spock.*
 /**
  * @author graemerocher
  */
-@Integration
+@Integration(applicationClass = Application)
 class RedirectInterceptorSpec extends GebSpec {
 
     void "Test that an interceptor that redirects works"() {

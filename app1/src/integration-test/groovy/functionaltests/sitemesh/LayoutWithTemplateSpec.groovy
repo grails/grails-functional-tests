@@ -1,12 +1,13 @@
 package functionaltests.sitemesh
 
+import functionaltests.Application
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 
 import spock.lang.*
 import geb.spock.*
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class LayoutWithTemplateSpec extends GebSpec {
 

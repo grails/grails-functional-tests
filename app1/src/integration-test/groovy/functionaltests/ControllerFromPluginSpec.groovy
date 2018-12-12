@@ -4,7 +4,7 @@ import grails.testing.mixin.integration.Integration
 import spock.lang.*
 import geb.spock.*
 
-@Integration(applicationClass=functionaltests.Application)
+@Integration(applicationClass = Application)
 class ControllerFromPluginSpec extends GebSpec {
 
     void 'test invoking a controller provided by a plugin'() {

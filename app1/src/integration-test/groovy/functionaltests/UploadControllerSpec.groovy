@@ -5,7 +5,7 @@ import grails.testing.mixin.integration.Integration
 
 /**
  */
-@Integration(applicationClass=functionaltests.Application)
+@Integration(applicationClass = Application)
 class UploadControllerSpec extends GebSpec {
 
 

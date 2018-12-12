@@ -3,8 +3,9 @@ package context
 import geb.spock.GebSpec
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
+import namespaces.Application
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class ContextPathSpec extends GebSpec {
 

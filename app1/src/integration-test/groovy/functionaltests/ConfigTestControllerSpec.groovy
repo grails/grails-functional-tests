@@ -4,7 +4,7 @@ import geb.spock.GebSpec
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class ConfigTestControllerSpec extends GebSpec {
 

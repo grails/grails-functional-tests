@@ -4,7 +4,7 @@ import grails.testing.mixin.integration.Integration
 import spock.lang.*
 import geb.spock.*
 
-@Integration(applicationClass=functionaltests.Application)
+@Integration(applicationClass = Application)
 class MiscFunctionalSpec extends GebSpec {
 
     @Issue('9133')

@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.*
 import geb.spock.*
 
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class NotFoundHandlerSpec extends GebSpec {
