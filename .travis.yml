@@ -21,7 +21,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 install: true # skips installation phase. otherwise ./gradlew assemble
-script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test -Dgeb.env=chromeHeadless --continue
+script: ./gradlew check assemble -Dgrails.env=test -Dgeb.env=chromeHeadless
 after_failure: ./travis/junit-errors-to-stdout.sh
 notifications:
   slack:
