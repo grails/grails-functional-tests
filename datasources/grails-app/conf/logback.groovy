@@ -29,3 +29,5 @@ if(Environment.current == Environment.DEVELOPMENT) {
         logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false )
     }
 }
+
+logger("org.hibernate", DEBUG)

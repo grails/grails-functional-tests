@@ -1,16 +1,11 @@
 package functionaltests
 
-import geb.spock.*
 import grails.testing.mixin.integration.Integration
+import geb.spock.GebSpec
+import spock.lang.Issue
 
-/**
- */
-
-@Integration(applicationClass = Application)
+@Integration(applicationClass=functionaltests.Application)
 class BookFunctionalSpec extends GebSpec {
-
-//    @Value('${local.server.port}')
-//    int serverPort
 
     void "Test that when the /viewBooks URL is hit it redirects to the book list"() {
         when:"We go to the book URI"
@@ -25,7 +20,7 @@ class BookFunctionalSpec extends GebSpec {
              go '/book/show/1'
 
          then:"Then thew show book view is rendered"
-         	title == "Show Book"
+            title == "Show Book"
      }
 
      void "Test that switching language results in correct encodings"() {
@@ -36,4 +31,17 @@ class BookFunctionalSpec extends GebSpec {
              $('a', class:'create').text() == 'Book anlegen'
              $('input', class:'delete').@value == 'Löschen'
      }
+
+    @Issue('10965')
+    void "When creating a book the params are not on the url"() {
+        when: 'creating a book'
+            go "/book/create"
+            $('#title').value('The Stand')
+            $('#create').click()
+
+        then:
+            title == 'Show Book'
+            !currentUrl.contains('title')
+            !currentUrl.contains('create')
+    }
 }

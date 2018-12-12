@@ -145,4 +145,20 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
             response.redirectedUrl == '/book/index'
             flash.message != null
     }
+
+    @Issue('grails/grails-core#10079')
+    void 'Test that auto-timestamp properties are not excluded from property binding in a command object'() {
+        given:
+        params.title = 'Some Title'
+        params.dateCreated = 'some value'
+        params.lastUpdated = 'some value'
+
+        when:
+        controller.commandBinding()
+
+        then:
+        model.errors.errorCount == 2
+        model.errors['dateCreated'].codes.contains('functionaltests.BookCommand.dateCreated.typeMismatch')
+        model.errors['lastUpdated'].codes.contains('functionaltests.BookCommand.lastUpdated.typeMismatch')
+    }
 }

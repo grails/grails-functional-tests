@@ -96,6 +96,14 @@ class BookController {
         }
     }
 
+    def commandBinding(BookCommand cmd) {
+        if (cmd.hasErrors()) {
+            respond(errors: cmd.errors)
+        } else {
+            respond('Ok')
+        }
+    }
+
     def validateBook() {
         def b = new Book(params)
         render "<html><body>The validate method returned ${b.validate()}</body></html>"

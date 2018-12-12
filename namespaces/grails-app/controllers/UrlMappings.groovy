@@ -7,6 +7,10 @@ class UrlMappings {
             }
         }
 
+        "/admin/$controller/$action?/$id?(.$format)?"{
+            namespace = "admin"
+        }
+
         "/"(view:"/index")
         "500"(view:'/error')
     }
