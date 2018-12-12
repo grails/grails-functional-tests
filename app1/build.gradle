@@ -52,9 +52,9 @@ dependencies {
     compile "org.hibernate:hibernate-core"
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:cache"
+    compile "org.grails.plugins:scaffolding:$scaffoldingVersion"
 
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
-    runtime "org.grails.plugins:scaffolding:$scaffoldingVersion"
     runtime "org.grails.plugins:fields:$fieldsVersion"
     runtime "org.apache.tomcat:tomcat-jdbc"
 
@@ -77,3 +77,7 @@ test {
     systemProperty('REPLACE_ME', 'test')
     systemProperty('foo.bar', 'test')
 }
+
+//compileTestGroovy.groovyOptions.forkOptions.jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
+//compileGroovy.groovyOptions.fork = true
+//compileGroovy.groovyOptions.forkOptions.jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
