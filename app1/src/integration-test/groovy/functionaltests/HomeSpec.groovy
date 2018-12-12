@@ -3,9 +3,6 @@ package functionaltests
 import geb.spock.*
 import grails.testing.mixin.integration.Integration
 
-/**
- * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
- */
 @Integration(applicationClass=functionaltests.Application)
 class HomeSpec extends GebSpec {
 

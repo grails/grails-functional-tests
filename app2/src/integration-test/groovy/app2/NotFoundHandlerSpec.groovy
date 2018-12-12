@@ -6,9 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.*
 import geb.spock.*
 
-/**
- * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
- */
 @Integration
 @Rollback
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
