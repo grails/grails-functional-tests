@@ -63,6 +63,7 @@ dependencies {
     //testCompile 'com.github.detro:phantomjsdriver:1.2.0'
 
     console "org.grails:grails-console"
+    testCompile "io.micronaut:micronaut-http-client:$micronautVersion"
 
     compile project(':loadfirst'), project(':loadsecond'), project(':loadafter')
 }
