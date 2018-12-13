@@ -59,7 +59,7 @@ dependencies {
     testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
     testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
-    testCompile "org.grails:grails-datastore-rest-client"
+    testCompile "io.micronaut:micronaut-http-client:$micronautVersion"
 }
 
 bootRun {
