@@ -1,7 +1,9 @@
 package functionaltests
 
 import grails.converters.JSON
+import grails.gorm.transactions.Transactional
 
+@Transactional
 class BazController {
     def index() {
         render Baz.list() as JSON
