@@ -21,6 +21,6 @@ class TestControllerSpec extends HttpClientCommonSpec {
 
         then: 'the request is forwarded'
         response2.status == HttpStatus.OK
-        response.body() == 'GET2'
+        response.body() == 'GET1'
     }
 }
