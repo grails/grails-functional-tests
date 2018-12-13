@@ -63,7 +63,7 @@ dependencies {
 
     console "org.grails:grails-console"
 
-    compile project(':loadfirst'), project(':loadsecond'), project(':loadafter')
+    compile project(':loadfirst'), project(':loadsecond')/*, project(':loadafter')*/
 }
 
 apply from: "${rootProject.projectDir}/gradle/geb.gradle"
