@@ -62,6 +62,7 @@ dependencies {
     testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
     console "org.grails:grails-console"
+    testCompile "io.micronaut:micronaut-http-client:$micronautVersion"
 
     compile project(':loadfirst'), project(':loadsecond')/*, project(':loadafter')*/
 }
