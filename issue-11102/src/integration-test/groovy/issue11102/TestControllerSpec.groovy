@@ -1,28 +1,26 @@
 package issue11102
 
-import grails.plugins.rest.client.RestBuilder
 import grails.testing.mixin.integration.Integration
-import spock.lang.Specification
+import io.micronaut.http.HttpRequest
+import io.micronaut.http.HttpResponse
+import io.micronaut.http.HttpStatus
 
 @Integration
-class TestControllerSpec extends Specification {
+class TestControllerSpec extends HttpClientCommonSpec {
 
     void 'can forward a request from a GET to another GET action'() {
-        given:
-        RestBuilder rest = new RestBuilder()
-
         when: 'getting the get1 action'
-        def resp = rest.get("http://localhost:${serverPort}/get1")
+        HttpResponse<String> response = client.toBlocking().exchange(HttpRequest.GET("/get1"))
 
         then: 'it is executed correctly'
-        resp.status == 200
-        resp.text == 'GET1'
+        response.status == HttpStatus.OK
+        response.body() == 'GET1'
 
         when: 'executing an action with a forward to the other one'
-        def resp2 = rest.get("http://localhost:${serverPort}/get2")
+        HttpResponse<String> response2 = client.toBlocking().exchange(HttpRequest.GET("/get2"))
 
         then: 'the request is forwarded'
-        resp2.status == 200
-        resp2.text == 'GET1'
+        response2.status == HttpStatus.OK
+        response.body() == 'GET2'
     }
 }
