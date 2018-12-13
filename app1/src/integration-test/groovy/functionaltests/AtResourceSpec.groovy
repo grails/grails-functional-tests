@@ -1,14 +1,13 @@
 package functionaltests
 
-import grails.test.mixin.integration.Integration
-import groovy.json.JsonSlurper
+import grails.testing.mixin.integration.Integration
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.client.HttpClient
 import spock.lang.Specification
 
-@Integration
+@Integration(applicationClass = Application)
 class AtResourceSpec extends Specification {
 
     def "A domain class annotated with @Resources exposes an endpoint"() {
@@ -20,6 +19,7 @@ class AtResourceSpec extends Specification {
         HttpResponse<String> rsp = client.toBlocking().exchange(HttpRequest.GET("/stuffs"), String)
 
         then:
+        noExceptionThrown()
         rsp.status() == HttpStatus.OK
 
         cleanup:
