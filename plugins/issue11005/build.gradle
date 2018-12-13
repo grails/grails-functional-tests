@@ -5,23 +5,24 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
     }
 }
 
-apply plugin:"org.grails.grails-plugin"
-apply plugin:"org.grails.grails-plugin-publish"
-apply plugin:"asset-pipeline"
-apply plugin:"org.grails.grails-gsp"
+//apply plugin:"org.grails.grails-plugin"
+//apply plugin:"org.grails.grails-plugin-publish"
+//apply plugin:"asset-pipeline"
+//apply plugin:"org.grails.grails-gsp"
 
-ext {
-    gradleWrapperVersion = project.gradleWrapperVersion
-}
+apply plugin: "asset-pipeline"
+apply plugin: "org.grails.grails-plugin"
+apply plugin: "org.grails.grails-gsp"
+apply plugin: 'maven-publish'
 
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenLocal()
@@ -46,9 +47,8 @@ dependencies {
     provided "org.grails:grails-dependencies"
     provided 'javax.servlet:javax.servlet-api:3.1.0'
 
-    testCompile "org.grails:grails-gorm-testing-support"
-    testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails:grails-web-testing-support"
+    testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
+    testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
     console "org.grails:grails-console"
 }
