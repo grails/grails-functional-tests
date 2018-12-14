@@ -31,6 +31,7 @@ assets {
 repositories {
     mavenLocal()
     maven { url "http://repo.grails.org/grails/core" }
+    maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
 }
 
 dependencyManagement {
@@ -64,7 +65,9 @@ dependencies {
     console "org.grails:grails-console"
     testCompile "io.micronaut:micronaut-http-client:$micronautVersion"
 
-    compile project(':loadfirst'), project(':loadsecond')/*, project(':loadafter')*/
+    compile project(':loadfirst')
+    compile project(':loadsecond')
+    compile project(':loadafter')
 }
 
 apply from: "${rootProject.projectDir}/gradle/geb.gradle"
