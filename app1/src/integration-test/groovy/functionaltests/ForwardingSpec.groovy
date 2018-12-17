@@ -60,7 +60,7 @@ class ForwardingSpec extends GebSpec {
         then: 'the flash data is still available'
         $('div', id: 'message').text() == 'flash.message is [some message]'
 
-        when: 'any furuther request is initiated'
+        when: 'any further request is initiated'
         go '/forwarding/displayFlash'
 
         then: 'the flash message has been cleared'
