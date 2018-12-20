@@ -5,7 +5,7 @@ include 'namespaces'
 include 'gorm'
 include 'issue-698-domain-save-npe'
 include 'hyphenated'
-//include 'issue-views-182'
+include 'issue-views-182'
 include 'issue-11102'
 
 include 'loadfirst'
