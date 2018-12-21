@@ -18,9 +18,6 @@ apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 apply plugin:"com.energizedwork.webdriver-binaries"
 
-ext {
-    gradleWrapperVersion = project.gradleWrapperVersion
-}
 
 assets {
     minifyJs = true
@@ -65,6 +62,3 @@ dependencies {
 
 apply from: "${rootProject.projectDir}/gradle/geb.gradle"
 
-task wrapper(type: Wrapper) {
-    gradleVersion = gradleWrapperVersion
-}

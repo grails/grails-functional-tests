@@ -19,10 +19,6 @@ apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 apply plugin:"com.energizedwork.webdriver-binaries"
 
-ext {
-    gradleWrapperVersion = project.gradleWrapperVersion
-}
-
 assets {
     minifyJs = true
     minifyCss = true

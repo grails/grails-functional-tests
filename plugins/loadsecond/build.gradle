@@ -16,10 +16,6 @@ apply plugin: "org.grails.grails-gsp"
 apply plugin: 'maven-publish'
 // Used for publishing to central repository, remove if not needed
 
-ext {
-  gradleWrapperVersion = project.gradleWrapperVersion
-}
-
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
 sourceCompatibility = 1.8

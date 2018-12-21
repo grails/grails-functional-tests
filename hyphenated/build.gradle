@@ -23,7 +23,6 @@ apply plugin:"com.energizedwork.webdriver-binaries"
 
 ext {
     grailsVersion = project.grailsVersion
-    gradleWrapperVersion = project.gradleWrapperVersion
 }
 
 assets {
@@ -70,6 +69,3 @@ dependencies {
 
 apply from: "${rootProject.projectDir}/gradle/geb.gradle"
 
-task wrapper(type: Wrapper) {
-    gradleVersion = gradleWrapperVersion
-}
