@@ -30,6 +30,7 @@ assets {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
 }
 
 dependencyManagement {

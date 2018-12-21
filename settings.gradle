@@ -1,5 +1,6 @@
 include 'app1'
 include 'app2'
+include 'app3'
 include 'datasources'
 include 'namespaces'
 include 'gorm'
