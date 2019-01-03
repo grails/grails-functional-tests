@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        mavenLocal()
         maven { url "http://repo.grails.org/grails/core" }
     }
     dependencies {
@@ -22,7 +21,6 @@ targetCompatibility = 1.8
 
 
 repositories {
-  mavenLocal()
   mavenCentral()
   maven { url "http://repo.grails.org/grails/core" }
 }
