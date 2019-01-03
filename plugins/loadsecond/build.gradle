@@ -22,8 +22,10 @@ targetCompatibility = 1.8
 
 
 repositories {
-  mavenCentral()
-  maven { url "http://repo.grails.org/grails/core" }
+    mavenCentral()
+    maven { url "http://repo.grails.org/grails/core" }
+    maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencyManagement {
