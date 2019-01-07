@@ -15,12 +15,6 @@ group "issueviews182"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
 
-repositories {
-    maven { url "https://repo.grails.org/grails/core" }
-    maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-}
-
 dependencyManagement {
     imports {
         mavenBom "org.grails:grails-bom:$grailsVersion"

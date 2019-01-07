@@ -22,4 +22,21 @@ subprojects {
         // check for updates every build
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
+
+    repositories {
+        mavenCentral()
+        maven { url "http://repo.grails.org/grails/core" }
+        maven {
+            url "https://oss.jfrog.org/artifactory/oss-snapshot-local"
+            content {
+                includeVersionByRegex('org\\.grails\\.plugins', '.*', '.*BUILD-SNAPSHOT')
+            }
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+            content {
+                includeVersionByRegex('io\\.micronaut.*', '.*', '.*BUILD-SNAPSHOT')
+            }
+        }
+    }
 }

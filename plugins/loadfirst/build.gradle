@@ -19,14 +19,6 @@ group "org.grails.plugins"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-
-repositories {
-    mavenCentral()
-    maven { url "http://repo.grails.org/grails/core" }
-    maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-}
-
 dependencyManagement {
     imports {
         mavenBom "org.grails:grails-bom:$grailsVersion"
