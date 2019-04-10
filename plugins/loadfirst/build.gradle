@@ -35,9 +35,7 @@ dependencies {
   provided "org.grails:grails-web-boot"
   provided "org.grails:grails-dependencies"
   provided "javax.servlet:javax.servlet-api:$servletApiVersion"
-
-  testCompile "org.grails:grails-plugin-testing"
-
+    
   console "org.grails:grails-console"
 }
 
