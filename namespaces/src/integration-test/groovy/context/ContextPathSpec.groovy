@@ -26,6 +26,6 @@ class ContextPathSpec extends GebSpec {
         go '/myApp'
 
         then:
-        title == null
+        title.contains('HTTP Status 404')
     }
 }
