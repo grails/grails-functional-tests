@@ -8,6 +8,7 @@ include 'issue-698-domain-save-npe'
 include 'hyphenated'
 include 'issue-views-182'
 include 'issue-11102'
+include 'micronaut'
 
 include 'loadfirst'
 project(':loadfirst').projectDir = new File('plugins/loadfirst')
