@@ -55,6 +55,7 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.4.0.Final"
     compile "org.grails.plugins:gsp"
     compileOnly "io.micronaut:micronaut-inject-groovy"
+    compile 'io.micronaut.configuration:micronaut-redis-lettuce:1.1.0'
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
@@ -71,6 +72,7 @@ dependencies {
     testCompile "org.seleniumhq.selenium:selenium-support:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-firefox-driver:3.14.0"
+    testCompile "com.github.kstyrc:embedded-redis:0.6"
 }
 
 bootRun {
