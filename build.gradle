@@ -24,8 +24,7 @@ subprojects {
     }
 
     repositories {
-        mavenCentral()
-        maven { url "http://repo.grails.org/grails/core" }
+        maven { url "https://repo.grails.org/grails/core" }
         maven {
             url "https://oss.jfrog.org/artifactory/oss-snapshot-local"
             content {
