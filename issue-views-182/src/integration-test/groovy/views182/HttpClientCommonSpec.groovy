@@ -15,9 +15,13 @@ class HttpClientCommonSpec extends Specification {
     @Shared
     String baseUrl
 
-    @OnceBefore
+    /**
+     * Move this to the subclass as after Spock 2.0-M3-groovy-3.0, {code}OnceBefore{/code} does not
+     * run when present in the super class.
+     */
+    /*@OnceBefore
     void init() {
         this.baseUrl = "http://localhost:$serverPort"
         this.client = HttpClient.create(new URL(baseUrl))
-    }
+    }*/
 }
