@@ -39,7 +39,7 @@ dependencies {
     provided "javax.servlet:javax.servlet-api:$servletApiVersion"
 
     //testCompile "org.grails:grails-plugin-testing"
-    compile "org.grails.plugins:spring-security-core:$springSecurityCoreVersion"
+    implementation "org.grails.plugins:spring-security-core:$springSecurityCoreVersion"
 
     console "org.grails:grails-console"
 }

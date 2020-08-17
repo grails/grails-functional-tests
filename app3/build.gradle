@@ -30,24 +30,24 @@ dependencyManagement {
 }
 
 dependencies {
-    compile "org.springframework.boot:spring-boot-starter-logging"
-    compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-autoconfigure"
-    compile "org.springframework.boot:spring-boot-starter-tomcat"
-    compile "org.grails:grails-dependencies"
-    compile "org.grails:grails-web-boot"
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "org.springframework.boot:spring-boot-autoconfigure"
+    implementation "org.springframework.boot:spring-boot-starter-tomcat"
+    implementation "org.grails:grails-dependencies"
+    implementation "org.grails:grails-web-boot"
 
-    compile "org.grails.plugins:hibernate5"
-    compile "org.hibernate:hibernate-core"
-    compile "org.hibernate:hibernate-ehcache"
-    compile "org.grails.plugins:cache"
+    implementation "org.grails.plugins:hibernate5"
+    implementation "org.hibernate:hibernate-core"
+    implementation "org.hibernate:hibernate-ehcache"
+    implementation "org.grails.plugins:cache"
 
-    runtime "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
-    runtime "org.grails.plugins:scaffolding:$scaffoldingVersion"
-    runtime "org.grails.plugins:fields:$fieldsVersion"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
+    runtimeOnly "org.grails.plugins:scaffolding:$scaffoldingVersion"
+    runtimeOnly "org.grails.plugins:fields:$fieldsVersion"
 
-    testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
-    testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
     console "org.grails:grails-console"
 }

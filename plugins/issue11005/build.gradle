@@ -40,8 +40,8 @@ dependencies {
     provided "org.grails:grails-dependencies"
     provided "javax.servlet:javax.servlet-api:$servletApiVersion"
 
-    testCompile "org.grails:grails-web-testing-support:$testingSupportVersion"
-    testCompile "org.grails:grails-gorm-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
     console "org.grails:grails-console"
 }
