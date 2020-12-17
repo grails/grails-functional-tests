@@ -1,7 +1,7 @@
 ext {
     def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/master/gradle.properties'
     def coreBuildFileUrl = new URL(coreBuildFilePath)
-    def versionNumberRegex = /^\s*projectVersion\s*=\s*['|"](.*)['|"]\s*$/
+    def versionNumberRegex = /projectVersion=(.*)/
     def grailsVersionList = []
     coreBuildFileUrl.eachLine { line ->
         def matcher = (line =~ versionNumberRegex)
