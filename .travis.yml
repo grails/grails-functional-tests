@@ -2,6 +2,11 @@
 #  directories:
 #  - $HOME/.gradle/wrapper
 language: groovy
+branches:
+  only:
+    - 3.2.x
+    - 3.3.x
+    - 4.0.x
 addons:
   chrome: stable
   firefox: latest
