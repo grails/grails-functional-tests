@@ -56,6 +56,6 @@ apply from: "${rootProject.projectDir}/gradle/geb.gradle"
 
 grails {
     plugins {
-        compile project(':loadafter')
+        implementation project(':loadafter')
     }
 }
