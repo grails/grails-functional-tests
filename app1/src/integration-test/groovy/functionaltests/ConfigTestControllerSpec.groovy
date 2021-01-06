@@ -19,6 +19,9 @@ class ConfigTestControllerSpec extends GebSpec {
         $('div', 3).text() == '1'
         $('div', 4).text() == 'test'
         $('div', 5).text() == '1'
-        $('div', 6).text() == '{baz=1, bax=2, bar=test}'
+        String text = $('div', 6).text()
+        text.contains('baz=1')
+        text.contains('bax=2')
+        text.contains('bar=test')
     }
 }
