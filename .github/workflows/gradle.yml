@@ -19,7 +19,7 @@ jobs:
         java: ['8', '11', '14']
     env:
       WORKSPACE: ${{ github.workspace }}
-      GRADLE_OPTS: -Xmx1500m -Dfile.encoding=UTF-8
+      GRADLE_OPTS: -Xmx1500m -Dfile.encoding=UTF-8 -XX:+CMSClassUnloadingEnabled
       RUN_TESTS_ONLY: false
     steps:
       - uses: actions/checkout@v2
