@@ -13,7 +13,7 @@ class BookIntegrationSpec extends Specification {
 
     void "create book and save"() {
         given:
-        def book = new Book(title:"The Stand")
+        def book = new Book(title:"Create The Stand")
         when:
         book.save(flush: true)
 
@@ -23,7 +23,7 @@ class BookIntegrationSpec extends Specification {
 
     void "test transaction rolled back from previous test"() {
         expect:
-            Book.countByTitle("The Stand") == 0
+            Book.countByTitle("Create The Stand") == 0
     }
 
     void "create book and save with where"() {
