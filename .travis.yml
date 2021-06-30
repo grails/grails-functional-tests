@@ -3,15 +3,16 @@
 #  directories:
 #  - $HOME/.gradle/wrapper
 language: groovy
+branches:
+  only:
+    - 3.2.x
 env:
   global:
   - TERM=dumb
   - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=372m -XX:+CMSClassUnloadingEnabled"
 jdk:
 - openjdk8
-#- oraclejdk7
-#- openjdk7
-before_install: 
+before_install:
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails/grails-*
   - rm -rf ~/.gradle/caches/modules-2/files-2.1/org.grails.plugins/*
   - rm -rf ~/.m2/repository/org/grails/plugins/*
