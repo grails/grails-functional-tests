@@ -1,6 +1,7 @@
 buildscript {
     repositories {
-        maven { url "http://repo.grails.org/grails/core" }
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"

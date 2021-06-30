@@ -3,11 +3,11 @@ on:
   push:
     branches:
       - master
-      - '[4-9]+.[0-9]+.x'
+      - '[3-9]+.[3-9]+.x'
   pull_request:
     branches:
       - master
-      - '[4-9]+.[0-9]+.x'
+      - '[3-9]+.[3-9]+.x'
   workflow_dispatch:
     inputs:
       message:
@@ -40,12 +40,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-      - name: Optional setup step
-        run: |
-          [ -f ./setup.sh ] && ./setup.sh || true
       - name: Run Tests
         run: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test -Dgeb.env=chromeHeadless
       - name: Publish Test Report
+        if: failure()
         uses: scacap/action-surefire-report@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

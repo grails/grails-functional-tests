@@ -1,6 +1,7 @@
 buildscript {
     repositories {
-        maven { url "http://repo.grails.org/grails/core" }
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -38,7 +39,6 @@ dependencies {
     provided "org.grails:grails-dependencies"
     provided "javax.servlet:javax.servlet-api:$servletApiVersion"
 
-    //testCompile "org.grails:grails-plugin-testing"
     compile "org.grails.plugins:spring-security-core:$springSecurityCoreVersion"
 
     console "org.grails:grails-console"

@@ -1,10 +1,7 @@
-#cache:
-#  directories:
-#  - $HOME/.gradle/wrapper
 language: groovy
 branches:
-  - 3.2.x
-  - 3.3.x
+  only:
+    - 3.2.x
 addons:
   chrome: stable
   firefox: latest
@@ -14,7 +11,6 @@ env:
   - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=372m -XX:+CMSClassUnloadingEnabled"
 jdk:
 - openjdk8
-- openjdk11
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -23,7 +19,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 install: true # skips installation phase. otherwise ./gradlew assemble
-script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test -Dgeb.env=chromeHeadless --continue
+script: ./gradlew check assemble --refresh-dependencies -Dgrails.env=test
 after_failure: ./travis/junit-errors-to-stdout.sh
 notifications:
   slack:
