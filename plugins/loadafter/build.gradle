@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenLocal()
-        maven { url "http://repo.grails.org/grails/core" }
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -35,7 +35,7 @@ repositories {
     maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
     mavenLocal()
     mavenCentral()
-    maven { url "http://repo.grails.org/grails/core" }
+    maven { url "https://repo.grails.org/grails/core" }
 }
 
 dependencyManagement {
