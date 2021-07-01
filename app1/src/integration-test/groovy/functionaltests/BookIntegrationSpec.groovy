@@ -9,15 +9,9 @@ import spock.lang.*
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
-@Integration
+@Integration(applicationClass = Application)
 @Rollback
 class BookIntegrationSpec extends Specification {
-
-    def setup() {
-    }
-
-    def cleanup() {
-    }
 
     void "create book and save"() {
         given:
@@ -26,12 +20,12 @@ class BookIntegrationSpec extends Specification {
         book.save(flush: true)
 
         then:
-        Book.list()?.size() == 2
+        Book.list()?.size() == old(Book.list()?.size()) + 1
     }
 
     void "test transaction rolled back from previous test"() {
         expect:
-            Book.count() == 1
+        !Book.findByTitle("Tbe Stand")
     }
 
     void "create book and save with where"() {
