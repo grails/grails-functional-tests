@@ -25,17 +25,16 @@ subprojects {
 
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
-        maven { url "https://oss.jfrog.org/oss-snapshot-local" }
         maven {
             url "https://oss.jfrog.org/artifactory/oss-snapshot-local"
-            content {
-                includeVersionByRegex('org\\.grails\\.plugins', '.*', '.*BUILD-SNAPSHOT')
+            mavenContent {
+                snapshotsOnly()
             }
         }
         maven {
             url "https://oss.sonatype.org/content/repositories/snapshots/"
             content {
-                includeVersionByRegex('io\\.micronaut.*', '.*', '.*BUILD-SNAPSHOT')
+                includeVersionByRegex('io\\.micronaut.*', '.*', '.*-SNAPSHOT')
             }
         }
     }
