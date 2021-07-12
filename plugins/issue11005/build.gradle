@@ -3,15 +3,10 @@ buildscript {
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
-        classpath "org.grails:grails-gradle-plugin:$grailsVersion"
+        classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
     }
 }
-
-//apply plugin:"org.grails.grails-plugin"
-//apply plugin:"org.grails.grails-plugin-publish"
-//apply plugin:"asset-pipeline"
-//apply plugin:"org.grails.grails-gsp"
 
 apply plugin: "asset-pipeline"
 apply plugin: "org.grails.grails-plugin"
