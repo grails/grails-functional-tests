@@ -46,7 +46,7 @@ dependencies {
     implementation "org.grails.plugins:views-json-templates:$viewsVersion"
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api"
-    runtimeOnly "org.glassfish.web:el-impl:2.1.2-b03"
+    runtimeOnly "org.glassfish.web:el-impl:2.2"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
 
