@@ -8,14 +8,31 @@ import spock.lang.Specification
 class BeanInjectionServiceSpec extends Specification {
 
     @Autowired
-    BeanInjectionService service
+    BeanInjectionService beanInjectionService
 
-    void "test injection is working"() {
+    @Autowired
+    TestService service
+
+    @Autowired
+    List<BeanInjectionService> bInjectService
+
+    void "test injecting Micronaut beans in a Grails service"() {
         expect:
-        service.namedServices.size() == 4
-        service.namedService2.name == "regular"
-        service.namedService3.name == "special"
-        service.namedService4.name == "qualified"
-        service.namedService.name == "primary"
+        beanInjectionService.namedServices.size() == 4
+        beanInjectionService.namedService2.name == "regular"
+        beanInjectionService.namedService3.name == "special"
+        beanInjectionService.namedService4.name == "qualified"
+        beanInjectionService.namedService.name == "primary"
+    }
+
+    void "test autowire Grails service by type"() {
+        expect:
+        service != null
+    }
+
+    void "test there are two beans for a Grails service when we inject Micronaut bean in it"() {
+        expect:
+        bInjectService != null
+        bInjectService.size() == 2
     }
 }
