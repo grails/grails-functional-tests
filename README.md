@@ -1,9 +1,9 @@
-# Functional tests for Grails 3 
+# Functional tests for Grails
 
-[![Build Status](https://travis-ci.org/grails/grails3-functional-tests.svg?branch=master)](https://travis-ci.org/grails/grails3-functional-tests)
+[![Java CI](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml/badge.svg?branch=master)](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml)
 
 
-A Suite of functional tests for Grails 3
+A Suite of functional tests for Grails
 
 To change the Geb driver used to run the functional tests supply the geb.env system property.
 
