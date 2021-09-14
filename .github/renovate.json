@@ -15,6 +15,12 @@
       "groupName": "groovy monorepo"
     },
     {
+      "matchPackagePatterns": [
+        "^org\\.seleniumhq\\.selenium"
+      ],
+      "groupName": "selenium monorepo"
+    },
+    {
       "matchPackageNames": [
         "org.grails.plugins:views-json",
         "org.grails.plugins:views-gradle",
