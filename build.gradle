@@ -2,19 +2,21 @@ ext {
     def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/master/gradle.properties'
     def coreBuildFileUrl = new URL(coreBuildFilePath)
     def versionNumberRegex = /projectVersion=(.*)/
-    def grailsVersionList = []
-    coreBuildFileUrl.eachLine { line ->
-        def matcher = (line =~ versionNumberRegex)
-        if(matcher) {
-            grailsVersionList << matcher[0][1]
-        }
-    }
-    if(!grailsVersionList) {
-        throw new GradleException("Could not find Grails version at $coreBuildFilePath")
-    } else if(grailsVersionList.size() > 1) {
-        throw new GradleException("Multiple Grails versions (${grailsVersionList}) found at $coreBuildFilePath")
-    }
-    grailsVersion = grailsVersionList[0]
+//    def grailsVersionList = []
+//    coreBuildFileUrl.eachLine { line ->
+//        def matcher = (line =~ versionNumberRegex)
+//        if(matcher) {
+//            grailsVersionList << matcher[0][1]
+//        }
+//    }
+//    if(!grailsVersionList) {
+//        throw new GradleException("Could not find Grails version at $coreBuildFilePath")
+//    } else if(grailsVersionList.size() > 1) {
+//        throw new GradleException("Multiple Grails versions (${grailsVersionList}) found at $coreBuildFilePath")
+//    }
+//    grailsVersion = grailsVersionList[0]
+    grailsVersion = '5.0.0-SNAPSHOT'
+
 }
 
 subprojects {
