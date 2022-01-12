@@ -1,6 +1,6 @@
 # Functional tests for Grails
 
-[![Java CI](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml/badge.svg?branch=master)](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml)
+[![Java CI](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml/badge.svg)](https://github.com/grails/grails3-functional-tests/actions/workflows/gradle.yml)
 
 
 A Suite of functional tests for Grails
