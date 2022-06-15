@@ -24,7 +24,7 @@ jobs:
       GRADLE_OPTS: -Xmx1500m -Dfile.encoding=UTF-8 -XX:+CMSClassUnloadingEnabled
       RUN_TESTS_ONLY: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Print Dispatch Information
         if: github.event_name == 'workflow_dispatch'
         env:
