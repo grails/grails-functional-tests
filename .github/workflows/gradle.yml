@@ -45,7 +45,7 @@ jobs:
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER }}
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY }}
       - name: Run Build
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
         id: build
         uses: gradle/gradle-build-action@v2
         env:
