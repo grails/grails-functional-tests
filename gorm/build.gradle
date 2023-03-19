@@ -4,7 +4,6 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
         classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
@@ -12,16 +11,9 @@ buildscript {
 version "0.1"
 group "gorm"
 
-apply plugin: "asset-pipeline"
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 apply plugin:"com.energizedwork.webdriver-binaries"
-
-
-assets {
-    minifyJs = true
-    minifyCss = true
-}
 
 dependencyManagement {
     imports {

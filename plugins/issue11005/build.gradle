@@ -4,18 +4,17 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
     }
 }
 
 apply plugin: "java-library"
-apply plugin: "asset-pipeline"
 apply plugin: "org.grails.grails-plugin"
 apply plugin: "org.grails.grails-gsp"
 apply plugin: 'maven-publish'
 
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
+
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
 
