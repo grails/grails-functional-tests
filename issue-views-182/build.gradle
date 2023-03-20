@@ -60,3 +60,15 @@ bootRun {
     String springProfilesActive = 'spring.profiles.active'
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
+
+tasks.named("bootJarMainClassName") {
+    configure {
+        mustRunAfter(tasks.named("compileGsonViews"))
+    }
+}
+
+tasks.named("bootJar") {
+    configure {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+}
