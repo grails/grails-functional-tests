@@ -15,7 +15,6 @@ ext {
         throw new GradleException("Multiple Grails versions (${grailsVersionList}) found at $coreBuildFilePath")
     }
     grailsVersion = grailsVersionList[0]
-    grailsVersion = '6.0.0-SNAPSHOT'
 }
 
 subprojects {
