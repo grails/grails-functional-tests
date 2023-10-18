@@ -20,8 +20,6 @@ jobs:
       matrix:
         java: ['11', '14', '17']
     env:
-      WORKSPACE: ${{ github.workspace }}
-      GRADLE_OPTS: -Xmx1500m -Dfile.encoding=UTF-8
       RUN_TESTS_ONLY: false
     steps:
       - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
@@ -35,17 +33,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
-      - name: Run Tests
-        if: github.event_name == 'pull_request'
-        id: tests
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: check -Dgeb.env=chromeHeadless
-        env:
-          GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER }}
-          GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY }}
       - name: Run Build
-        if: github.event_name != 'pull_request'
         id: build
         uses: gradle/gradle-build-action@v2
         env:
@@ -54,9 +42,3 @@ jobs:
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY }}
         with:
           arguments: build -Dgeb.env=chromeHeadless
-      - name: Publish Test Report
-        if: steps.build.outcome == 'failure' || steps.tests.outcome == 'failure'
-        uses: scacap/action-surefire-report@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          report_paths: '**/build/test-results/test/TEST-*.xml'
