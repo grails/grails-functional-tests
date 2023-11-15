@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
+        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
 
@@ -13,7 +13,7 @@ group "app3"
 
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
-apply plugin:"com.energizedwork.webdriver-binaries"
+apply plugin: "com.github.erdi.webdriver-binaries"
 
 dependencyManagement {
     imports {
