@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: ['11', '14', '17']
+        java: ['17']
     env:
       RUN_TESTS_ONLY: false
     steps:
