@@ -50,3 +50,7 @@ project(':loadafter').projectDir = new File('plugins/loadafter')
 
 include 'issue11005'
 project(':issue11005').projectDir = new File('plugins/issue11005')
+
+include 'issue-11767'
+include 'issue-11767-plugin'
+project(':issue-11767-plugin').projectDir = new File('plugins/issue-11767-plugin')
