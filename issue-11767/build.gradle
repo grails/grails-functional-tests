@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        maven { url = 'https://repo.grails.org/grails/core' }
+    }
+    dependencies {
+        classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
+    }
+}
+
+group = 'issue11767.app'
+
+apply plugin: 'application'
+apply plugin: 'groovy'
+apply plugin: 'org.grails.grails-web'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.grails.org/grails/core' }
+}
+
+dependencyManagement {
+    imports { mavenBom "org.grails:grails-bom:$grailsVersion" }
+    applyMavenExclusions false
+}
+
+dependencies {
+
+    implementation project(':issue-11767-plugin')
+
+    implementation 'org.grails:grails-core'
+    implementation 'org.grails:grails-logging'
+    implementation 'org.grails:grails-plugin-url-mappings'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    compileOnly 'io.micronaut:micronaut-inject-groovy'
+
+    testImplementation 'io.micronaut:micronaut-http-client'
+    testImplementation 'io.micronaut:micronaut-inject-groovy'
+    testImplementation 'org.grails:grails-web-testing-support'
+    testImplementation 'org.spockframework:spock-core'
+
+}
+
+application {
+    mainClass = 'issue11767.Application'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
