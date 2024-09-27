@@ -1,12 +1,12 @@
 plugins {
-    id "com.gradle.enterprise" version "3.8.1"
-    id 'com.gradle.common-custom-user-data-gradle-plugin' version '1.6.5'
+    id "com.gradle.enterprise" version "3.15.1"
+    id 'com.gradle.common-custom-user-data-gradle-plugin' version '1.12.1'
 }
 
 gradleEnterprise {
     server = 'https://ge.grails.org'
     buildScan {
-        publishAlways()
+        publishAlwaysIf(System.getenv('CI') == 'true')
         publishIfAuthenticated()
         uploadInBackground = System.getenv("CI") == null
         capture {
@@ -50,3 +50,7 @@ project(':loadafter').projectDir = new File('plugins/loadafter')
 
 include 'issue11005'
 project(':issue11005').projectDir = new File('plugins/issue11005')
+
+include 'issue-11767'
+include 'issue-11767-plugin'
+project(':issue-11767-plugin').projectDir = new File('plugins/issue-11767-plugin')

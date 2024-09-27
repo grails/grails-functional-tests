@@ -4,7 +4,6 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
         classpath "org.grails.plugins:views-gradle:$viewsVersion"
     }
 }
@@ -60,4 +59,16 @@ bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
     String springProfilesActive = 'spring.profiles.active'
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
+}
+
+tasks.named("bootJarMainClassName") {
+    configure {
+        mustRunAfter(tasks.named("compileGsonViews"))
+    }
+}
+
+tasks.named("bootJar") {
+    configure {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
 }

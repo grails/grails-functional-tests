@@ -1,5 +1,5 @@
 ext {
-    def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/5.1.x/gradle.properties'
+    def coreBuildFilePath = 'https://raw.githubusercontent.com/grails/grails-core/6.1.x/gradle.properties'
     def coreBuildFileUrl = new URL(coreBuildFilePath)
     def versionNumberRegex = /projectVersion=(.*)/
     def grailsVersionList = []

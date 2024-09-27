@@ -15,8 +15,9 @@ apply plugin: 'maven-publish'
 
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 dependencyManagement {
     imports {
