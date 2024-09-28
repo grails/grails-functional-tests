@@ -25,6 +25,8 @@ subprojects {
 
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 
     tasks.withType(Test) {
@@ -38,4 +40,16 @@ subprojects {
             showStackTraces true
         }
     }
+    apply plugin: 'java'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    dependencies {
+        implementation "org.sitemesh:grails-plugin-sitemesh3:$grailsSitemesh3Version"
+    }
+
 }

@@ -33,7 +33,7 @@ include 'issue-698-domain-save-npe'
 include 'hyphenated'
 include 'issue-views-182'
 include 'issue-11102'
-include 'micronaut'
+//include 'micronaut' micronaut has been removed from Grails can be restored based on https://micronaut-projects.github.io/micronaut-spring/latest/guide/#springBootStarter
 
 include 'loadfirst'
 project(':loadfirst').projectDir = new File('plugins/loadfirst')
@@ -47,6 +47,6 @@ project(':loadafter').projectDir = new File('plugins/loadafter')
 include 'issue11005'
 project(':issue11005').projectDir = new File('plugins/issue11005')
 
-include 'issue-11767'
-include 'issue-11767-plugin'
-project(':issue-11767-plugin').projectDir = new File('plugins/issue-11767-plugin')
+//include 'issue-11767' micronaut has been removed from Grails can be restored based on https://micronaut-projects.github.io/micronaut-spring/latest/guide/#springBootStarter
+//include 'issue-11767-plugin'
+//project(':issue-11767-plugin').projectDir = new File('plugins/issue-11767-plugin')

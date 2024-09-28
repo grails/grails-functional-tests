@@ -15,9 +15,6 @@ apply plugin: 'maven-publish'
 version "0.1-SNAPSHOT"
 group "org.grails.plugins"
 
-sourceCompatibility = 1.11
-targetCompatibility = 1.11
-
 dependencyManagement {
     imports {
         mavenBom "org.grails:grails-bom:$grailsVersion"
@@ -33,7 +30,7 @@ dependencies {
 
     api "org.grails:grails-web-boot"
     api "org.grails:grails-dependencies"
-    api "javax.servlet:javax.servlet-api:$servletApiVersion"
+    api "jakarta.servlet:jakarta.servlet-api:$servletApiVersion"
 
     testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
     testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"

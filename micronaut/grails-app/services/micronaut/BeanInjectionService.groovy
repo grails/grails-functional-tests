@@ -4,7 +4,7 @@ import bean.injection.NamedService
 import bean.injection.Qualified
 import org.springframework.beans.factory.annotation.Autowired
 
-import javax.inject.Named
+import jakarta.inject.Named
 
 class BeanInjectionService {
 

@@ -29,7 +29,3 @@ dependencies {
     implementation 'org.grails:grails-core'
     compileOnly 'io.micronaut:micronaut-inject-groovy'
 }
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-}
