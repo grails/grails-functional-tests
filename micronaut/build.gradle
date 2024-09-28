@@ -4,9 +4,9 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "org.grails.plugins:hibernate5:8.0.1"
+        classpath "org.grails.plugins:hibernate5:8.1.0"
         classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.4.7"
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:4.4.0"
     }
 }
 
@@ -61,7 +61,7 @@ dependencies {
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "javax.xml.bind:jaxb-api:2.3.1"
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:3.4.7"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.3.0"
     testImplementation "org.grails:grails-gorm-testing-support"
     testImplementation "org.mockito:mockito-core"
     testImplementation "org.grails:grails-web-testing-support"
