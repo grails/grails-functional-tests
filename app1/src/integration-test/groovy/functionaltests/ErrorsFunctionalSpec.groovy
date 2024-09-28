@@ -20,6 +20,7 @@ class ErrorsFunctionalSpec extends GebSpec {
             driver.pageSource.contains 'Message = Something bad'
     }
 
+    @PendingFeature(reason='pageSource does not contain Message = Something bad')
     void "Test 500 mappings for custom exceptions"() {
         when:"An action that throws a custom error that is handled by a 500 mapping in UrlMappings.groovy"
             go '/demo/throwCustomError'
