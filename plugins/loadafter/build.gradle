@@ -37,7 +37,6 @@ dependencies {
     api "org.grails:grails-dependencies"
     api "javax.servlet:javax.servlet-api:$servletApiVersion"
 
-    //testCompile "org.grails:grails-plugin-testing"
     implementation "org.grails.plugins:spring-security-core:$springSecurityCoreVersion"
 
     console "org.grails:grails-console"
