@@ -5,7 +5,6 @@ import spock.lang.*
 import geb.spock.*
 
 @Integration(applicationClass = Application)
-@Ignore
 class FiltersFunctionalSpec extends GebSpec {
 
     void 'test before filter'() {

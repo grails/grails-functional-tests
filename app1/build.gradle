@@ -1,11 +1,12 @@
 buildscript {
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
+        mavenCentral()
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
-        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
+        classpath "com.github.erdi:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
 
@@ -37,10 +38,11 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.grails:grails-dependencies"
     implementation "org.grails:grails-web-boot"
+    implementation "org.grails:grails-core"
 
     implementation "org.grails.plugins:hibernate5"
-    implementation "org.hibernate:hibernate-core"
-    implementation "org.hibernate:hibernate-ehcache"
+    implementation "org.hibernate:hibernate-core-jakarta:$hibernate5Version"
+    implementation "org.hibernate:hibernate-ehcache:$hibernate5Version"
     implementation "org.grails.plugins:cache"
     implementation "org.grails.plugins:scaffolding:$scaffoldingVersion"
 
@@ -53,6 +55,7 @@ dependencies {
 
     console "org.grails:grails-console"
     testImplementation "io.micronaut:micronaut-http-client:$micronautVersion"
+    testImplementation "io.micronaut.serde:micronaut-serde-jackson:$micronautSerdeJacksonVersion"
 
     implementation project(':loadfirst')
     implementation project(':loadsecond')

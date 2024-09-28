@@ -5,7 +5,7 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
-        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
+        classpath "com.github.erdi:webdriver-binaries-gradle-plugin:$webdriverBinariesVersion"
     }
 }
 
@@ -51,7 +51,6 @@ dependencies {
     implementation "org.grails.plugins:gsp"
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
-    runtimeOnly "org.glassfish.web:el-impl:2.2"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
