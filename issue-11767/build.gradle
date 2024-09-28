@@ -35,6 +35,7 @@ dependencies {
     compileOnly 'io.micronaut:micronaut-inject-groovy'
 
     testImplementation 'io.micronaut:micronaut-http-client'
+    testImplementation "io.micronaut.serde:micronaut-serde-jackson:$micronautSerdeJacksonVersion"
     testImplementation 'io.micronaut:micronaut-inject-groovy'
     testImplementation 'org.grails:grails-web-testing-support'
     testImplementation 'org.spockframework:spock-core'

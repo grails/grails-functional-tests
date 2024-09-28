@@ -59,6 +59,7 @@ dependencies {
     testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
 
     testImplementation "io.micronaut:micronaut-http-client:$micronautVersion"
+    testImplementation "io.micronaut.serde:micronaut-serde-jackson:$micronautSerdeJacksonVersion"
 }
 
 apply from: "${rootProject.projectDir}/gradle/geb.gradle"
