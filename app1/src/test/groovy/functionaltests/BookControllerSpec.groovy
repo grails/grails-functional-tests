@@ -11,7 +11,6 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
         params["title"] = 'Book Title'
     }
 
-    @PendingFeature(reason='org.hibernate.HibernateException: No Session found for current thread')
     void "Test the index action returns the correct model"() {
 
         when:"The index action is executed"
@@ -30,7 +29,6 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
             model.book!= null
     }
 
-    @PendingFeature(reason='org.hibernate.HibernateException: No Session found for current thread')
     void "Test the save action correctly persists an instance"() {
 
         when:"The save action is executed with an invalid instance"
@@ -89,7 +87,6 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
             model.book == book
     }
 
-    @PendingFeature(reason='org.hibernate.HibernateException: No Session found for current thread')
     void "Test the update action performs an update on a valid domain instance"() {
         when:"Update is called for a domain instance that doesn't exist"
             request.contentType = FORM_CONTENT_TYPE
@@ -122,7 +119,6 @@ class BookControllerSpec extends Specification implements ControllerUnitTest<Boo
             flash.message != null
     }
 
-    @PendingFeature(reason='org.hibernate.HibernateException: No Session found for current thread')
     void "Test that the delete action deletes an instance if it exists"() {
         when:"The delete action is called for a null instance"
             request.contentType = FORM_CONTENT_TYPE
