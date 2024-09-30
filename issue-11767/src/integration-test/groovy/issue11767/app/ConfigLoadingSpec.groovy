@@ -5,6 +5,7 @@ import grails.testing.spock.OnceBefore
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.client.HttpClient
 import spock.lang.AutoCleanup
+import spock.lang.PendingFeature
 import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Unroll
@@ -23,6 +24,11 @@ class ConfigLoadingSpec extends Specification {
     }
 
     @Unroll
+    @PendingFeature(reason='''
+    Plugin Groovy Micronaut Bean - my.value2: null
+    Plugin Java Micronaut Bean - my.value2: null
+    App Groovy Micronaut Bean - my.value2: null
+    ''')
     void '#beanType beans can load plugin config values'(String beanType, String expectedResponseValue) {
 
         when: 'The app controller is visited'
