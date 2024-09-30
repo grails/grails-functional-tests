@@ -44,14 +44,14 @@ dependencies {
     implementation "org.hibernate:hibernate-core-jakarta:$hibernate5Version"
     implementation "org.hibernate:hibernate-ehcache:$hibernate5Version"
     implementation "org.grails.plugins:cache"
-    implementation "org.grails.plugins:scaffolding:$scaffoldingVersion"
+    implementation "org.grails.plugins:scaffolding"
 
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
-    runtimeOnly "org.grails.plugins:fields:$fieldsVersion"
+    runtimeOnly "org.grails.plugins:fields"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
 
-    testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
-    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-web-testing-support"
+    testImplementation "org.grails:grails-gorm-testing-support"
 
     console "org.grails:grails-console"
     testImplementation "io.micronaut:micronaut-http-client:$micronautVersion"

@@ -36,11 +36,11 @@ dependencies {
     implementation "org.grails.plugins:cache"
 
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
-    runtimeOnly "org.grails.plugins:scaffolding:$scaffoldingVersion"
-    runtimeOnly "org.grails.plugins:fields:$fieldsVersion"
+    runtimeOnly "org.grails.plugins:scaffolding"
+    runtimeOnly "org.grails.plugins:fields"
 
-    testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
-    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-web-testing-support"
+    testImplementation "org.grails:grails-gorm-testing-support"
 
     console "org.grails:grails-console"
 }
