@@ -32,17 +32,15 @@ dependencies {
     implementation "org.grails:grails-web-boot"
 
     implementation "org.grails.plugins:hibernate5"
-    implementation "org.hibernate:hibernate-core-jakarta:$hibernate5Version"
-    implementation "org.hibernate:hibernate-ehcache:$hibernate5Version"
     implementation "org.grails.plugins:cache"
 
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
-    runtimeOnly "org.grails.plugins:scaffolding:$scaffoldingVersion"
-    runtimeOnly "org.grails.plugins:fields:$fieldsVersion"
+    runtimeOnly "org.grails.plugins:scaffolding"
+    runtimeOnly "org.grails.plugins:fields"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
 
-    testImplementation "org.grails:grails-web-testing-support:$testingSupportVersion"
-    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
+    testImplementation "org.grails:grails-web-testing-support"
+    testImplementation "org.grails:grails-gorm-testing-support"
 
     console "org.grails:grails-console"
 }
