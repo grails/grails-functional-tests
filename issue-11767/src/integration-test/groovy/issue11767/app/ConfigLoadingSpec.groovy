@@ -24,11 +24,6 @@ class ConfigLoadingSpec extends Specification {
     }
 
     @Unroll
-    @PendingFeature(reason='''
-    Plugin Groovy Micronaut Bean - my.value2: null
-    Plugin Java Micronaut Bean - my.value2: null
-    App Groovy Micronaut Bean - my.value2: null
-    ''')
     void '#beanType beans can load plugin config values'(String beanType, String expectedResponseValue) {
 
         when: 'The app controller is visited'
