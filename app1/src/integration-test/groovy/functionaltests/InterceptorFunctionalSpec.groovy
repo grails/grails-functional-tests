@@ -43,7 +43,6 @@ class InterceptorFunctionalSpec extends GebSpec {
         $().text() == 'Name: JSB'
     }    
 
-    @PendingFeature(reason='test does not match')
     void 'Test that after interceptor can render text'() {
         when:
         go '/demo/show?interceptorRendersText=true'
