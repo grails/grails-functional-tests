@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: ['17']
+        java: ['17', '21', '23']
     env:
       RUN_TESTS_ONLY: false
     steps:
@@ -31,7 +31,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
+          distribution: 'liberica'
           java-version: ${{ matrix.java }}
       - name: Run Build
         id: build
