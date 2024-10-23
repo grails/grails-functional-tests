@@ -1,11 +1,11 @@
 package app2
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
+import spock.lang.PendingFeature
 
 @Integration(applicationClass = Application)
-class FiltersFunctionalSpec extends GebSpec {
+class FiltersFunctionalSpec extends ContainerGebSpec {
 
     @PendingFeature(reason = 'pageSource does not contain the value')
     void 'test before filter'() {

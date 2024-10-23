@@ -1,11 +1,12 @@
 package namespaces.admin
 
-import geb.spock.GebSpec
+
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.PendingFeature
 
 @Integration
-class ReportControllerSpec extends GebSpec {
+class ReportControllerSpec extends ContainerGebSpec {
 
     @PendingFeature(reason = 'title is blank')
     void "test that admin report page renders correctly"() {

@@ -1,13 +1,14 @@
 package functionaltests
 
-import geb.spock.*
+
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.PendingFeature
 
 /**
  */
 @Integration(applicationClass = Application)
-class UploadControllerSpec extends GebSpec {
+class UploadControllerSpec extends ContainerGebSpec {
 
     @PendingFeature(reason='text is null')
     void "Test file upload"() {

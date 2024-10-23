@@ -1,11 +1,11 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.Issue
-import geb.spock.GebSpec
 
 @Integration(applicationClass = Application)
-class InspectConfigControllerSpec extends GebSpec {
+class InspectConfigControllerSpec extends ContainerGebSpec {
 
     @Issue('GRAILS-11951')
     void "test config properties from plugins"() {

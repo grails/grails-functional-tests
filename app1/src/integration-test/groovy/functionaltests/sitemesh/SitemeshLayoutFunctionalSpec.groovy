@@ -1,12 +1,13 @@
 package functionaltests.sitemesh
 
 import functionaltests.Application
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
+import spock.lang.Issue
+import spock.lang.PendingFeature
 
 @Integration(applicationClass = Application)
-class SitemeshLayoutFunctionalSpec extends GebSpec {
+class SitemeshLayoutFunctionalSpec extends ContainerGebSpec {
 
     @Issue('GRAILS-12045')
     @PendingFeature(reason = 'title is empty')

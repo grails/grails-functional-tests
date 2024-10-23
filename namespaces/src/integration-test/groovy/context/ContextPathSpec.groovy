@@ -1,14 +1,15 @@
 package context
 
-import geb.spock.GebSpec
+
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import namespaces.Application
 import spock.lang.PendingFeature
 
 @Integration(applicationClass = Application)
 @Rollback
-class ContextPathSpec extends GebSpec {
+class ContextPathSpec extends ContainerGebSpec {
 
     @PendingFeature(reason = 'title is blank')
     void "test the context path defined in the environment overrides the standard one"() {

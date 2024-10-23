@@ -1,6 +1,7 @@
 package functionaltests
 
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 /*
@@ -19,9 +20,6 @@ import grails.testing.mixin.integration.Integration
  * limitations under the License.
  */
 
-
-
-import geb.spock.*
 import spock.lang.PendingFeature
 
 /**
@@ -29,7 +27,7 @@ import spock.lang.PendingFeature
  */
 @Integration(applicationClass = Application)
 @Rollback
-class AsyncFunctionalSpec extends GebSpec {
+class AsyncFunctionalSpec extends ContainerGebSpec {
 
     @PendingFeature(reason = 'pageSource == <html><head></head><body></body></html>')
     void "Test async response rendering works"() {

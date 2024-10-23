@@ -1,12 +1,13 @@
 package functionaltests
 
-import geb.spock.GebSpec
+
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 @Integration(applicationClass = Application)
 @Rollback
-class ConfigTestControllerSpec extends GebSpec {
+class ConfigTestControllerSpec extends ContainerGebSpec {
 
     void "Test that configuration properties are correctly read"() {
         when:"When evaluting configuration values"
