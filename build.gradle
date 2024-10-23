@@ -42,10 +42,8 @@ subprojects {
     }
     apply plugin: 'java'
 
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)
-        }
+    compileJava {
+        options.release = 17
     }
 
     dependencies {
