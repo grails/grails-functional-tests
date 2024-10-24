@@ -1,12 +1,13 @@
 package hyphenated
 
-import geb.spock.GebSpec
+
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 @Integration(applicationClass = Application)
 @Rollback
-class NameSpacedControllerSpec extends GebSpec {
+class NameSpacedControllerSpec extends ContainerGebSpec {
 
     void "test returns null"() {
         when: "The home page is visited"

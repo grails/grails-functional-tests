@@ -1,13 +1,14 @@
 package functionaltests
 
-import geb.spock.GebSpec
+
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.Issue
 
 @Integration
 @Rollback
-class RedirectWithAndWithoutParamsFunctionalSpec extends GebSpec {
+class RedirectWithAndWithoutParamsFunctionalSpec extends ContainerGebSpec {
 
     @Issue('grails-core-#10965')
     void 'Params are not added to the url after a redirect even if they are passed to the redirect'() {

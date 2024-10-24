@@ -1,10 +1,11 @@
 package functionaltests
 
-import geb.spock.*
+
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 @Integration(applicationClass = Application)
-class HomeSpec extends GebSpec {
+class HomeSpec extends ContainerGebSpec {
 
     void "Test the home page renders correctly"() {
         when:"The home page is visited"

@@ -1,11 +1,11 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
+import spock.lang.Issue
 
 @Integration(applicationClass = Application)
-class MiscFunctionalSpec extends GebSpec {
+class MiscFunctionalSpec extends ContainerGebSpec {
 
     @Issue('9133')
     void "Test that bean override configuration works"() {

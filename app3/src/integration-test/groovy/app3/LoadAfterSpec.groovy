@@ -1,10 +1,11 @@
 package app3
 
-import geb.spock.GebSpec
+
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 @Integration
-class LoadAfterSpec extends GebSpec {
+class LoadAfterSpec extends ContainerGebSpec {
 
     void "Test override one plugin view from another plugin"() {
         when:

@@ -1,15 +1,14 @@
 package namespaces
 
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
 
 /**
  */
 @Integration(applicationClass = Application)
 @Rollback
-class NamespaceViewRenderingSpec extends GebSpec {
+class NamespaceViewRenderingSpec extends ContainerGebSpec {
 
     void "Test view rendering works as expected when namespaces are used"() {
         when:"When an implicit namespace is used"

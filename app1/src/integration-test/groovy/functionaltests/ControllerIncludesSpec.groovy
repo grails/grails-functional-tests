@@ -1,6 +1,7 @@
 package functionaltests
 
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 
 /*
@@ -18,18 +19,12 @@ import grails.testing.mixin.integration.Integration
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
-
-import spock.lang.*
-import geb.spock.*
-
 /**
  * @author graemerocher
  */
 @Integration(applicationClass = Application)
 @Rollback
-class ControllerIncludesSpec extends GebSpec {
+class ControllerIncludesSpec extends ContainerGebSpec {
 
     void "Test includes that render a view work when called from a controller action"() {
         when:"When an include that renders a view is used inside a controller action"

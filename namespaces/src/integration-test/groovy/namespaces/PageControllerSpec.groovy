@@ -1,11 +1,12 @@
 package namespaces
 
-import geb.spock.GebSpec
+
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import spock.lang.PendingFeature
 
 @Integration
-class PageControllerSpec extends GebSpec {
+class PageControllerSpec extends ContainerGebSpec {
 
     @PendingFeature(reason = 'title is blank')
     void "test that the page renders correctly"() {

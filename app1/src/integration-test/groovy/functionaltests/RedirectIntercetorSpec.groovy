@@ -1,14 +1,13 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
 
 /**
  * @author graemerocher
  */
 @Integration(applicationClass = Application)
-class RedirectInterceptorSpec extends GebSpec {
+class RedirectInterceptorSpec extends ContainerGebSpec {
 
     void "Test that an interceptor that redirects works"() {
         when:

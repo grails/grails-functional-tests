@@ -1,15 +1,12 @@
 package app2
 
 import grails.gorm.transactions.Rollback
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.*
-import geb.spock.*
 
 @Integration(applicationClass = Application)
 @Rollback
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class NotFoundHandlerSpec extends GebSpec {
+class NotFoundHandlerSpec extends ContainerGebSpec {
 
     void "Test that a 404 handler renders the view correctly when a forward is executed"() {
         when:"An action is visited where an interceptor uses response.sendError(404)"

@@ -1,14 +1,13 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
 
 /**
  * @author graemerocher
  */
 @Integration(applicationClass = Application)
-class InterceptorDependencyInjectionSpec extends GebSpec {
+class InterceptorDependencyInjectionSpec extends ContainerGebSpec {
 
     void "Test that interceptors are subjected to autowire by name"() {
         when:

@@ -1,11 +1,11 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import geb.spock.GebSpec
 import spock.lang.Issue
 
 @Integration(applicationClass=functionaltests.Application)
-class BookFunctionalSpec extends GebSpec {
+class BookFunctionalSpec extends ContainerGebSpec {
 
     void "Test that when the /viewBooks URL is hit it redirects to the book list"() {
         when:"We go to the book URI"

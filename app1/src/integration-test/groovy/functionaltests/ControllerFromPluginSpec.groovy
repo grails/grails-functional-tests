@@ -1,11 +1,10 @@
 package functionaltests
 
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.*
-import geb.spock.*
 
 @Integration(applicationClass = Application)
-class ControllerFromPluginSpec extends GebSpec {
+class ControllerFromPluginSpec extends ContainerGebSpec {
 
     void 'test invoking a controller provided by a plugin'() {
         when:
