@@ -31,7 +31,7 @@ dependencies {
 
     api "org.grails:grails-web-boot"
     api "org.grails:grails-dependencies"
-    api "jakarta.servlet:jakarta.servlet-api:$servletApiVersion"
+    api "jakarta.servlet:jakarta.servlet-api"
 
     console "org.grails:grails-console"
 }

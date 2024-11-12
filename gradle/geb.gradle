@@ -1,3 +1,3 @@
 dependencies {
-    integrationTestImplementation testFixtures("org.grails.plugins:geb:$gebPluginVersion")
+    integrationTestImplementation testFixtures("org.grails.plugins:geb")
 }

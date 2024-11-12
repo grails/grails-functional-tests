@@ -32,7 +32,7 @@ dependencies {
     implementation "org.grails.plugins:hibernate5"
     implementation "org.grails.plugins:cache"
 
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails"
     runtimeOnly "org.grails.plugins:scaffolding"
     runtimeOnly "org.grails.plugins:fields"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"

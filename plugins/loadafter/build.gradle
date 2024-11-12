@@ -32,7 +32,7 @@ dependencies {
 
     api "org.grails:grails-web-boot"
     api "org.grails:grails-dependencies"
-    api "jakarta.servlet:jakarta.servlet-api:$servletApiVersion"
+    api "jakarta.servlet:jakarta.servlet-api"
 
     implementation "org.grails.plugins:spring-security-core:$springSecurityCoreVersion"
 

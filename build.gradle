@@ -48,9 +48,4 @@ subprojects {
     apply plugin: 'java'
 
     compileJava.options.release = 17
-
-    dependencies {
-        implementation "org.sitemesh:grails-plugin-sitemesh3:$grailsSitemesh3Version"
-    }
-
 }

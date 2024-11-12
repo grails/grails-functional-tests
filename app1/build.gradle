@@ -42,7 +42,7 @@ dependencies {
     implementation "org.grails.plugins:cache"
     implementation "org.grails.plugins:scaffolding"
 
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails"
     runtimeOnly "org.grails.plugins:fields"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
 

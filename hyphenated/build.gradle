@@ -34,7 +34,7 @@ dependencies {
     runtimeOnly "org.grails.plugins:scaffolding"
     runtimeOnly "org.grails.plugins:fields"
 
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
 
     testImplementation "org.grails:grails-web-testing-support"
