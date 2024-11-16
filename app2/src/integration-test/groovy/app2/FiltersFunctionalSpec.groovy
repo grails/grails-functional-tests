@@ -2,12 +2,12 @@ package app2
 
 import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
-import spock.lang.PendingFeature
+import spock.lang.Ignore
 
+@Ignore('Filters support was dropped in Grails 3.2 according to f370b49')
 @Integration(applicationClass = Application)
 class FiltersFunctionalSpec extends ContainerGebSpec {
 
-    @PendingFeature(reason = 'pageSource does not contain the value')
     void 'test before filter'() {
         when:
         go '/filtersDemo/index'
@@ -19,7 +19,6 @@ class FiltersFunctionalSpec extends ContainerGebSpec {
         // $().text() == 'Filter Ran: yes.'
     }
 
-    @PendingFeature(reason = 'part of text is missing')
     void 'test after filter'() {
         when:
         go '/filtersDemo/data'
