@@ -11,7 +11,6 @@ import spock.lang.PendingFeature
 @Rollback
 class ContextPathSpec extends ContainerGebSpec {
 
-    @PendingFeature(reason = 'title is blank')
     void "test the context path defined in the environment overrides the standard one"() {
         when:
         go '/myAppTest'

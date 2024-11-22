@@ -8,7 +8,6 @@ import spock.lang.PendingFeature
 @Integration
 class PageControllerSpec extends ContainerGebSpec {
 
-    @PendingFeature(reason = 'title is blank')
     void "test that the page renders correctly"() {
         when: "The admin page is visited"
         go '/myAppTest/admin/page/index'

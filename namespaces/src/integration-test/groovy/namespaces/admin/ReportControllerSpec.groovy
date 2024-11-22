@@ -8,7 +8,6 @@ import spock.lang.PendingFeature
 @Integration
 class ReportControllerSpec extends ContainerGebSpec {
 
-    @PendingFeature(reason = 'title is blank')
     void "test that admin report page renders correctly"() {
         when: "The admin report page is visited"
         go '/myAppTest/admin/report/index'
