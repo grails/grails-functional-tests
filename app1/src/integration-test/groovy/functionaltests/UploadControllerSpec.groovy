@@ -1,17 +1,14 @@
 package functionaltests
 
-
 import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import org.testcontainers.images.builder.Transferable
-import spock.lang.PendingFeature
 
 /**
  */
 @Integration(applicationClass = Application)
 class UploadControllerSpec extends ContainerGebSpec {
 
-    @PendingFeature(reason='https://github.com/grails/grails-core/issues/13849')
     void "Test file upload"() {
         when:"When go to an upload page"
         go "/upload/index"
@@ -26,7 +23,6 @@ class UploadControllerSpec extends ContainerGebSpec {
         $('p').text() == 'Test upload'
     }
 
-    @PendingFeature(reason='https://github.com/grails/grails-core/issues/13849')
     void "Test file upload parameters"() {
         when:"When go to an upload page"
         go "/upload/index"
