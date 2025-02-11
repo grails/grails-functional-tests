@@ -1,1 +1,0 @@
-Implicit View Rendered!
